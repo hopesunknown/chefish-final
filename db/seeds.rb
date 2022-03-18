@@ -83,3 +83,34 @@ peruvianclass = Meetup.create(title: "Peruvian Cooking Class", date: "Nov 4", ti
 
 dutchclass = Meetup.create(title: "Dutch Cooking Class", date: "Sep 9", time: "5pm", location: "Brookland", topic_id: dutch.id,
     image: "https://www.expatica.com/app/uploads/sites/3/2014/05/stamppot.jpg")
+
+
+puts "Seeding user_meetups..."
+
+meetup1 = UserMeetup.create(user_id: jim.id, meetup_id: mexicanclass.id)
+meetup2 = UserMeetup.create(user_id: liz.id, meetup_id: thaiclass.id)
+meetup3 = UserMeetup.create(user_id: joe.id, meetup_id: frenchclass.id)
+meetup4 = UserMeetup.create(user_id: amy.id, meetup_id: italianclass.id)
+meetup5 = UserMeetup.create(user_id: bob.id, meetup_id: japaneseclass.id)
+meetup6 = UserMeetup.create(user_id: joy.id, meetup_id: chineseclass.id)
+
+meetup7 = UserMeetup.create(user_id: ana.id, meetup_id: mexicanclass.id)
+meetup8 = UserMeetup.create(user_id: dan.id, meetup_id: frenchclass.id)
+meetup9 = UserMeetup.create(user_id: cat.id, meetup_id: italianclass.id)
+meetup10 = UserMeetup.create(user_id: sam.id, meetup_id: japaneseclass.id)
+meetup11 = UserMeetup.create(user_id: ron.id, meetup_id: chineseclass.id)
+meetup12 = UserMeetup.create(user_id: vee.id, meetup_id: thaiclass.id)
+
+meetup13 = UserMeetup.create(user_id: jim.id, meetup_id: peruvianclass.id)
+meetup14 = UserMeetup.create(user_id: liz.id, meetup_id: dutchclass.id)
+meetup15 = UserMeetup.create(user_id: joe.id, meetup_id: southernclass.id)
+meetup16 = UserMeetup.create(user_id: amy.id, meetup_id: spanishclass.id)
+meetup17 = UserMeetup.create(user_id: bob.id, meetup_id: koreanclass.id)
+meetup18 = UserMeetup.create(user_id: joy.id, meetup_id: moroccanclass.id)
+
+meetup19 = UserMeetup.create(user_id: ana.id, meetup_id: dutchclass.id)
+meetup20 = UserMeetup.create(user_id: dan.id, meetup_id: southernclass.id)
+meetup21 = UserMeetup.create(user_id: cat.id, meetup_id: spanishclass.id)
+meetup22 = UserMeetup.create(user_id: sam.id, meetup_id: koreanclass.id)
+meetup23 = UserMeetup.create(user_id: ron.id, meetup_id: moroccanclass.id)
+meetup24 = UserMeetup.create(user_id: vee.id, meetup_id: peruvianclass.id)
