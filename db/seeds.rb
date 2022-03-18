@@ -28,3 +28,19 @@ cat = User.create(first_name: "Cat", email: "Cat@cat.com", password: "c")
 sam = User.create(first_name: "Sam", email: "Sam@sam.com", password: "s")
 ron = User.create(first_name: "Ron", email: "Ron@ron.com", password: "r")
 vee = User.create(first_name: "Vee", email: "Vee@vee.com", password: "v")
+
+puts "Seeding topics..."
+
+mexican = Topic.create(topic_name: "Mexican", description: "Celebrate food from our southern neighbor")
+thai = Topic.create(topic_name: "Thai", description: "Thai chilis are super intense.")
+chinese = Topic.create(topic_name: "Chinese", description: "Beef lo mein is a must!")
+japanese = Topic.create(topic_name: "Japanese", description: "Everyone loves sushi")
+italian = Topic.create(topic_name: "Italian", description: "Make pasta and pizza the right way")
+french = Topic.create(topic_name: "French", description: "Say oui to French cuisine")
+
+southern = Topic.create(topic_name: "Southern", description: "Grits and collards")
+spanish = Topic.create(topic_name: "Spanish", description: "Try the seafood paella!")
+korean = Topic.create(topic_name: "Korean", description: "Gochujang burns through your sinuses.")
+moroccan = Topic.create(topic_name: "Indian", description: "Spices on spices on spices!")
+peruvian = Topic.create(topic_name: "Peruvian", description: "Mmmm Peruvian chicken.")
+dutch = Topic.create(topic_name: "Dutch", description: "Dutch cuisine is very simple...almost everything is fried")
