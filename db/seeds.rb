@@ -44,3 +44,42 @@ korean = Topic.create(topic_name: "Korean", description: "Gochujang burns throug
 moroccan = Topic.create(topic_name: "Indian", description: "Spices on spices on spices!")
 peruvian = Topic.create(topic_name: "Peruvian", description: "Mmmm Peruvian chicken.")
 dutch = Topic.create(topic_name: "Dutch", description: "Dutch cuisine is very simple...almost everything is fried")
+
+puts "Seeding meetups..."
+
+mexicanclass = Meetup.create(title: "Mexican Cooking Class", date: "May 1", time: "2pm", location: "Georgetown", topic_id: mexican.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/car_wd/public/recipe_photo/Enchiladas%20sm.jpg")
+
+thaiclass = Meetup.create(title: "Thai Cooking Class", date: "May 5", time: "1pm", location: "Dupont Circle", topic_id: thai.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/passage_to_asia_pad_thai.jpeg")
+
+chineseclass = Meetup.create(title: "Chinese Cooking Class", date: "May 2", time: "3pm", location: "Capitol Hill", topic_id: chinese.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/Chicken_Chow_Mein_0.jpg")
+
+japaneseclass = Meetup.create(title: "Japanese Cooking Class", date: "Apr 1", time: "1pm", location: "Tenleytown", topic_id: japanese.id,
+    image: "https://www.happyfoodstube.com/wp-content/uploads/2016/03/homemade-sushi-image.jpg")
+
+italianclass = Meetup.create(title: "Italian Cooking Class", date: "Apr 4", time: "4pm", location: "Friendship Heights", topic_id: italian.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/Food20167903_0.jpg")
+
+frenchclass = Meetup.create(title: "French Cooking Class", date: "Aug 15", time: "10am", location: "Adams Morgan", topic_id: french.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/WS_Coq_Au_Vin_V_347_R.jpg")
+    
+
+southernclass = Meetup.create(title: "Southern Cooking Class", date: "Jul 10", time: "9am", location: "Navy Yard", topic_id: southern.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/rc_wd/public/recipe_photo/Southern-Fried-Chicken-with-Maple-Syrup-Waffle.jpg")
+
+spanishclass = Meetup.create(title: "Spanish Cooking Class", date: "Jun 11", time: "3pm", location: "Anacostia", topic_id: spanish.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/Ardm20158149_0.jpg")
+
+koreanclass = Meetup.create(title: "Korean Cooking Class", date: "Mar 1", time: "4pm", location: "U Street", topic_id: korean.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/WED%20Korean%20bibambap%200024.jpg")
+
+moroccanclass = Meetup.create(title: "Moroccan Cooking Class", date: "Jul 9", time: "10am", location: "H Street", topic_id: moroccan.id,
+    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/P504845ae_0.jpg")
+
+peruvianclass = Meetup.create(title: "Peruvian Cooking Class", date: "Nov 4", time: "7pm", location: "Chinatown", topic_id: peruvian.id,
+    image: "https://cdn.vox-cdn.com/uploads/chorus_image/image/63079659/pab.0.jpg")
+
+dutchclass = Meetup.create(title: "Dutch Cooking Class", date: "Sep 9", time: "5pm", location: "Brookland", topic_id: dutch.id,
+    image: "https://www.expatica.com/app/uploads/sites/3/2014/05/stamppot.jpg")
