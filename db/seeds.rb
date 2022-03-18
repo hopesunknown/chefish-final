@@ -130,3 +130,35 @@ comment9 = Comment.create(content: "This class inspired me to make more from thi
 comment10 = Comment.create(content: "At first I was intimidated by this cuisine and techniques but the instructor was so welcoming and broke things down for me!", rating: 9, user_id: sam.id, meetup_id: meetup4.id)
 comment11 = Comment.create(content: "Fantastic group of people and it was so much fun!!!!!!", rating: 10, user_id: ron.id, meetup_id: meetup3.id)
 comment12 = Comment.create(content: "We did not have access to any of the spices. The host ran out and forgot to buy more.", rating: 3, user_id: ana.id, meetup_id: meetup2.id)
+
+puts "Seeding user_topics..."
+
+usertopic1 = UserTopic.create(user_id: joe.id, topic_id: french.id)
+usertopic2 = UserTopic.create(user_id: amy.id, topic_id: italian.id)
+usertopic3 = UserTopic.create(user_id: bob.id, topic_id: japanese.id)
+usertopic4 = UserTopic.create(user_id: joy.id, topic_id: chinese.id)
+usertopic5 = UserTopic.create(user_id: jim.id, topic_id: thai.id)
+usertopic6 = UserTopic.create(user_id: liz.id, topic_id: mexican.id)
+
+usertopic7 = UserTopic.create(user_id: ana.id, topic_id: thai.id)
+usertopic8 = UserTopic.create(user_id: dan.id, topic_id: french.id)
+usertopic9 = UserTopic.create(user_id: cat.id, topic_id: italian.id)
+usertopic10 = UserTopic.create(user_id: sam.id, topic_id: japanese.id)
+usertopic11 = UserTopic.create(user_id: ron.id, topic_id: chinese.id)
+usertopic12 = UserTopic.create(user_id: vee.id, topic_id: mexican.id)
+
+usertopic13 = UserTopic.create(user_id: joe.id, topic_id: southern.id)
+usertopic14 = UserTopic.create(user_id: amy.id, topic_id: spanish.id)
+usertopic15 = UserTopic.create(user_id: bob.id, topic_id: korean.id)
+usertopic16 = UserTopic.create(user_id: joy.id, topic_id: moroccan.id)
+usertopic17 = UserTopic.create(user_id: jim.id, topic_id: peruvian.id)
+usertopic18 = UserTopic.create(user_id: liz.id, topic_id: dutch.id)
+
+usertopic19 = UserTopic.create(user_id: ana.id, topic_id: dutch.id)
+usertopic20 = UserTopic.create(user_id: dan.id, topic_id: southern.id)
+usertopic21 = UserTopic.create(user_id: cat.id, topic_id: spanish.id)
+usertopic22 = UserTopic.create(user_id: sam.id, topic_id: korean.id)
+usertopic23 = UserTopic.create(user_id: ron.id, topic_id: moroccan.id)
+usertopic24 = UserTopic.create(user_id: vee.id, topic_id: peruvian.id)
+
+puts "DONE SEEDING!"
