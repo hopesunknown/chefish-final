@@ -114,3 +114,19 @@ meetup21 = UserMeetup.create(user_id: cat.id, meetup_id: spanishclass.id)
 meetup22 = UserMeetup.create(user_id: sam.id, meetup_id: koreanclass.id)
 meetup23 = UserMeetup.create(user_id: ron.id, meetup_id: moroccanclass.id)
 meetup24 = UserMeetup.create(user_id: vee.id, meetup_id: peruvianclass.id)
+
+puts "Seeding comments..."
+
+comment1 = Comment.create(content: "This was a lot of fun!", rating: 7, user_id: liz.id, meetup_id: meetup2.id)
+comment2 = Comment.create(content: "The class helped me improve my cooking skills!", rating: 8, user_id: joe.id, meetup_id: meetup6.id)
+comment3 = Comment.create(content: "Food that we made was so delicious. Will return for future classes!!!", rating: 9, user_id: amy.id, meetup_id: meetup5.id)
+comment4 = Comment.create(content: "AMAZING FOOD, AMAZING HOST, AMAZING EXPERIENCE", rating: 10, user_id: bob.id, meetup_id: meetup4.id)
+comment5 = Comment.create(content: "The host was super chill and knowledgeable and was able to help me out when I had no idea what I was doing", rating: 8, user_id: joy.id, meetup_id: meetup3.id)
+comment6 = Comment.create(content: "the kitchen was not the cleanest but the dishes came out great", rating: 5, user_id: jim.id, meetup_id: meetup1.id)
+
+comment7 = Comment.create(content: "the experience could have been better...", rating: 6, user_id: vee.id, meetup_id: meetup1.id)
+comment8 = Comment.create(content: "BLAND FOOD...sorry", rating: 4, user_id: dan.id, meetup_id: meetup6.id)
+comment9 = Comment.create(content: "This class inspired me to make more from this cuisine", rating: 8, user_id: cat.id, meetup_id: meetup5.id)
+comment10 = Comment.create(content: "At first I was intimidated by this cuisine and techniques but the instructor was so welcoming and broke things down for me!", rating: 9, user_id: sam.id, meetup_id: meetup4.id)
+comment11 = Comment.create(content: "Fantastic group of people and it was so much fun!!!!!!", rating: 10, user_id: ron.id, meetup_id: meetup3.id)
+comment12 = Comment.create(content: "We did not have access to any of the spices. The host ran out and forgot to buy more.", rating: 3, user_id: ana.id, meetup_id: meetup2.id)
