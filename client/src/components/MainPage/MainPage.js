@@ -14,25 +14,27 @@ export default function MainPage() {
   const [clickedMeetup, setClickedMeetup] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/meetups")
+    fetch("/meetups")
       .then((response) => response.json())
       .then((meetups) => setMeetups(meetups));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/users/${window.userId}`)
+    fetch("/users")
       .then((response) => response.json())
       .then((user) => setUser(user));
   }, []);
 
+  //inside users fetch: window.userId
+
   useEffect(() => {
-    fetch("http://localhost:3000/comments")
+    fetch("/comments")
       .then((response) => response.json())
       .then((comments) => setComments(comments));
   }, []);
 
   function rerender(clickedMeetup) {
-    fetch(`http://localhost:3000/meetups/${clickedMeetup.id}`)
+    fetch(`/meetups/${clickedMeetup.id}`)
       .then((response) => response.json())
       .then((meetup) => setClickedMeetup(meetup));
   };
