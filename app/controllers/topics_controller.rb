@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
     end
 
     def show 
-        topic = Topic.find(params[:id]) 
+        topic = find_topic
         render json: topic.to_json(:include => [:meetups, :users])
     end
 
@@ -18,11 +18,11 @@ class TopicsController < ApplicationController
     end
 
     def edit 
-        topic = Topic.find(params[:id])
+        topic = find_topic
     end
     
     def update
-        topic = Topic.find(params[:id])
+        topic = find_topic
         user = User.find(topic_params[:user_ids])
         meetup = Meetup.find(topic_params[:meetup_ids])
 
@@ -33,12 +33,16 @@ class TopicsController < ApplicationController
     end
 
     def destroy
-        topic = Topic.find(params[:id])
+        topic = find_topic
         topic.destroy 
-        render json: topic
+        head :no_content
     end
 
     private
+
+    def find_topic
+        Topic.find(params[:id])
+    end
 
     def topic_params
         params.require(:topic).permit(:meetup_ids, :user_ids, :topic_name, :description)

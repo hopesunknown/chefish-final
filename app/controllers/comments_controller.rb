@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     end
 
     def edit 
-        comment = Comment.find(params[:id])
+        comment = find_comment
     end
     
     def update
@@ -49,6 +49,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-        params.require(:comment).permit(:user_id, :meetup_id, :content, :rating)
+        params.permit(:user_id, :meetup_id, :content, :rating)
     end
 end
