@@ -29,19 +29,17 @@ export default function Login() {
 
     // const body = this.state;
 
-    const configObj = {
+    fetch("http://localhost:3000/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Accept: "application/json",
       },
       body: JSON.stringify({ 
-        first_name: firstName, 
-        email: email, 
-        password: password }),
-    };
-
-    fetch(`http://localhost:3000/users/login`, configObj)
+        firstName, 
+        email, 
+        password 
+      }),
+    })
       .then((resp) => resp.json())
       .then((user) => {
         if (user.id === undefined || user.id === 0) {
