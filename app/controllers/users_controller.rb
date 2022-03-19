@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:new, :create, :login]
+    skip_before_action :authorize, only: [:new, :create, :login]
     
     def index
         users = User.all
-        render json: users.to_json(
-            :include => [:topics, {:meetups => {:include => :topic}}, :comments])
+        render json: users, include: [:topics, {:meetups => {:include => :topic}}, :comments]
     end
 
     def login
@@ -28,8 +27,7 @@ class UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])
-        render json: user.to_json(
-            :include => [:topics, {:meetups => {:include => :topic}}, :comments])
+        render json: user, include: [:topics, {:meetups => {:include => :topic}}, :comments]
     end
     
     def create
@@ -84,7 +82,7 @@ class UsersController < ApplicationController
         render json: user
     end
 
-    private 
+    private
 
     def user_params
         params.require(:user).permit(:topic_ids, :meetup_ids, :comment_ids, :first_name, :email, :password, :topicArray)
