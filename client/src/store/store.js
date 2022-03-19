@@ -1,11 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-// import catsReducer from "./features/cats/catsSlice";
+import meetupsReducer from "../reducers/meetupsSlice";
 
 const store = configureStore({
-//   reducer: {
-//     cats: catsReducer,
-//   },
+  reducer: {
+    meetups: meetupsReducer,
+  },
 });
 
 export default store;
