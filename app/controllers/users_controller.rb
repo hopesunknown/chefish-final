@@ -6,35 +6,16 @@ class UsersController < ApplicationController
         render json: users, include: [:topics, {:meetups => {:include => :topic}}, :comments]
     end
 
-    def login
-        user = User.find_by(first_name: params[:first_name])
-        if user && user.password === params[:password]
-            session[:id] = user.id
-            render json: user
-        else 
-            render json: {message: "error"}
-        end 
-    end
-
-    def loggedInUser 
-        user = User.find(session[:id])
-        render json: user
-    end
-
-    # def logout 
-    #     session[:id] = nil
-    # end
-
     def show
-        user = User.find(params[:id])
+        user = find_user
         render json: user, include: [:topics, {:meetups => {:include => :topic}}, :comments]
     end
     
     def create
-        user = User.new(user_params)
+        user = find_user
         user.save
         params["topicArray"].each do  |topic| 
-        UserTopic.create(user_id: user.id, topic_id: topic["id"])
+        UserTopic.create!(user_id: user.id, topic_id: topic["id"])
         end
 
         if user.valid?
@@ -43,13 +24,9 @@ class UsersController < ApplicationController
             render json: {error: "Failed to create user"}
         end
     end
-
-    def edit
-        user = User.find(params[:id])
-    end
     
     def update
-        user = User.find(params[:id])
+        user = find_user
         topic = Topic.find(user_params[:topic_ids])
         meetup = User.find(user_params[:meetup_ids])
         comment = Comment.find(user_params[:comment_ids])
@@ -61,9 +38,27 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        user = find_user
+        user.destroy 
+        head :no_content
+    end
+
+
+    # CUSTOM ROUTES
+
+    def edit
+        user = find_user
+    end
+
+    def loggedInUser 
+        # user = find_user
+        # render json: user
+        render json: @current_user
+    end
+
     def joinMeetup 
         UserMeetup.find_or_create_by(user_id: params[:user_id], meetup_id: params[:meetup_id])
-        
     end
 
     def leaveMeetup
@@ -76,13 +71,11 @@ class UsersController < ApplicationController
         topic.delete
     end
 
-    def destroy
-        user = User.find(params[:id])
-        user.destroy 
-        render json: user
-    end
-
     private
+
+    def find_user
+        User.find(params[:id])
+    end
 
     def user_params
         params.require(:user).permit(:topic_ids, :meetup_ids, :comment_ids, :first_name, :email, :password, :topicArray)
