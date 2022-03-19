@@ -3,12 +3,12 @@ class UsersController < ApplicationController
     
     def index
         users = User.all
-        render json: users, include: [:topics, {:meetups => {:include => :topic}}, :comments]
+        render json: users.to_json(:include => [:topics, {:meetups => {:include => :topic}}, :comments])
     end
 
     def show
         user = find_user
-        render json: user, include: [:topics, {:meetups => {:include => :topic}}, :comments]
+        render json: user.to_json(:include => [:topics, {:meetups => {:include => :topic}}, :comments])
     end
     
     def create
