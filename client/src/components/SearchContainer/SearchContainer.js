@@ -1,12 +1,12 @@
-// import React from "react";
+import React from "react";
 
-// export default function SearchContainer() {
-
-//     return (
-//       <div className="SearchContainer">
-//         {/* <marquee behavior="scroll" direction="left"> */}
-//      
-//         {/* </marquee> */}
-//       </div>
-//     );
-//   }
+export default function SearchContainer({ userInfo }) {
+ 
+    return (
+      <div className="SearchContainer">
+        <marquee behavior="scroll" direction="left">
+          cooking classes marquee......
+        </marquee>
+      </div>
+    );
+  }

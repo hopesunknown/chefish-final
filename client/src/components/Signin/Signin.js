@@ -12,21 +12,9 @@ export default function Signin() {
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
 
-  // function handleNameChange(event) {
-  //   setFirstName(event)
-  // };
-
-  // function handleEmailChange(event) {
-  //   setEmail(event);
-  // };
-
-  // function handlePasswordChange(event) {
-  //   setPassword(event);
-  // };
-
   function handleSubmit(event) {
     event.preventDefault();
-
+    setLoggedIn(true);
     // const body = this.state;
 
     fetch("/users/login", {
@@ -46,7 +34,7 @@ export default function Signin() {
           console.log("Not logged in");
         } else {
           setLoggedIn(true);
-          // window.userId = user.id;
+          window.userId = user.id;
         }
       });
   };
