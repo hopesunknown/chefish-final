@@ -1,99 +1,95 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import SearchContainer from "./SearchContainer";
-import Footer from "./Footer";
-import ProfileNavBar from "./ProfileNavBar";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import SearchContainer from "../SearchContainer/SearchContainer";
+import Footer from "../Footer/Footer";
+import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 
-class Signin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      first_name: "",
-      email: "",
-      password: "",
-      loggedIn: false,
-    };
-  }
 
-  handleNameChange = (event) => {
-    this.setState({ first_name: event.target.value });
-  };
+export default function Signin() {
 
-  handleEmailChange = (event) => {
-    this.setState({ email: event.target.value });
-  };
+    const [firstName, setFirstName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [loggedIn, setLoggedIn] = useState(false);
 
-  handlePasswordChange = (event) => {
-    this.setState({ password: event.target.value });
-  };
+  // function handleNameChange(event) {
+  //   setFirstName(event)
+  // };
 
-  handleSubmit = (event) => {
+  // function handleEmailChange(event) {
+  //   setEmail(event);
+  // };
+
+  // function handlePasswordChange(event) {
+  //   setPassword(event);
+  // };
+
+  function handleSubmit(event) {
     event.preventDefault();
 
-    const body = this.state;
+    // const body = this.state;
 
-    const configObj = {
+    fetch("/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify(body),
-    };
-
-    fetch(`http://localhost:3000/users/login`, configObj)
+      body: JSON.stringify({ 
+        firstName, 
+        email, 
+        password 
+      }),
+    })
       .then((resp) => resp.json())
       .then((user) => {
-        console.log(user)
         if (user.id === undefined || user.id === 0) {
           console.log("Not logged in");
         } else {
-          console.log("login");
-          this.setState({ loggedIn: true });
-          window.userId = user.id;
+          setLoggedIn(true);
+          // window.userId = user.id;
         }
       });
   };
 
-  render() {
-    return this.state.loggedIn ? (
-      <Redirect to="/main" things={this.state} />
+  return (
+    loggedIn ? (
+      <Link to="/main" />
     ) : (
       <div>
-        THIS IS THE SIGN IN PAGE
+        THIS IS THE LOGIN PAGE
         <div className="NavBar">
           <ProfileNavBar />
           <SearchContainer />
           <div className="Logo">
-            <img src="/logo1.png" alt="logo" width="100" />
+            {/* <img src="/logo1.png" alt="logo" width="100" /> */}
           </div>
         </div>
         <div className="Signin">
-          <h1>Sign in:</h1>
+          <h1>Log in:</h1>
 
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <label>First Name:</label>
             <input
-            className="SignInForm"
+              className="SignInForm"
               type="text"
-              value={this.state.first_name}
-              onChange={this.handleNameChange}
+              value={firstName}
+              onChange={(event) => setFirstName(event.target.value)}
             />
             <br />
             <label>Email:</label>
             <input
-            className="SignInForm"
+              className="SignInForm"
               type="text"
-              value={this.state.email}
-              onChange={this.handleEmailChange}
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
             <br />
             <label>Password:</label>
             <input
-            className="SignInForm"
+              className="SignInForm"
               type="text"
-              value={this.state.password}
-              onChange={this.handlePasswordChange}
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
             <br />
             <br />
@@ -102,8 +98,6 @@ class Signin extends Component {
         </div>
         <Footer />
       </div>
-    );
-  }
+    )
+  )
 }
-
-export default Signin;
