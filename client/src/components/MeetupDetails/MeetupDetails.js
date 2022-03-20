@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
-// need to double-check this code
-
 export default function MeetupDetails({ clickedMeetup, rerender }) {
   const [content, setContent] = useState("");
 
   function handleClick(clickedMeetup) {
     alert("Meetup Saved!");
 
-    const configObj = {
+    fetch("/join", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,9 +15,7 @@ export default function MeetupDetails({ clickedMeetup, rerender }) {
         user_id: window.userId,
         meetup_id: clickedMeetup.id
       }),
-    };
-
-    fetch("/join", configObj);
+    })
   };
 
   function handleCommentChange(event) {
@@ -29,22 +25,17 @@ export default function MeetupDetails({ clickedMeetup, rerender }) {
     alert("Comment Submitted!");
     event.preventDefault();
 
-    const body = {
-      user_id: window.userId,
-      meetup_id: clickedMeetup.id,
-      content: content,
-    };
-
-    const configObj = {
+    fetch("/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify(body),
-    };
-
-    fetch("/comments", configObj);
+      body: JSON.stringify({
+        user_id: window.userId,
+        meetup_id: clickedMeetup.id,
+        content: content,
+      }),
+    })
     setContent(content);
     setTimeout(() => {
       rerender(clickedMeetup);

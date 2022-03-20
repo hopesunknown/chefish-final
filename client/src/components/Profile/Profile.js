@@ -8,13 +8,13 @@ export default function Profile() {
   const [user, setUser] = useState({});
 
   function componentDidMount() {
-        fetch(`http://localhost:3000/users/${window.userId}`)
+        fetch(`/users/${window.userId}`)
           .then((response) => response.json())
           .then((user) => setUser(user));
   }
 
   function rerender(){
-        fetch(`http://localhost:3000/users/${window.userId}`)
+        fetch(`/users/${window.userId}`)
           .then((response) => response.json())
           .then((user) => setUser(user));
   }
