@@ -9,7 +9,15 @@ class SessionsController < ApplicationController
         # else 
         #     render json: {message: "Invalid username or password"}, status: :unauthorized
         # end 
-    end
+    # end
+    if user && user.password === params[:password]
+        session[:id] = user.id
+
+        render json: user
+    else 
+        render json: {message: "error"}
+    end 
+end
 
     def logout
         session.delete :user_id
