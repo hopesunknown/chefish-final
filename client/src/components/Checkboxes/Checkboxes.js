@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Checkboxes() {
 
@@ -6,15 +6,15 @@ export default function Checkboxes() {
 
 
 function componentDidMount() {
+    
+useEffect(() => {
     fetch("/topics")
       .then((res) => res.json())
-      .then((topics) => {
-        setTopics();
-      });
-  }
+      .then((topics) => setTopics(topics));
+  }, []);
 
   function handleChange(t) {
-    setTopics(topics.map((topic) => {topic.id === t.id ? { ...topic, clicked: true } : topic})}
+    setTopics(topics.map((topic) => topic.id === t.id ? { ...topic} : topic))}
   handleTopicClick(t);
 
     return (
@@ -43,4 +43,4 @@ function componentDidMount() {
         </form>
       </div>
     );
-  }
+}}
