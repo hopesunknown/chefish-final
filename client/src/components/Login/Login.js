@@ -29,7 +29,7 @@ export default function Login() {
 
     // const body = this.state;
 
-    fetch("http://localhost:3000/users/login", {
+    fetch("/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export default function Login() {
           console.log("Not logged in");
         } else {
           setLoggedIn(true);
-          window.userId = user.id;
+          // window.userId = user.id;
         }
       });
   };
