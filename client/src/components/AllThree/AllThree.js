@@ -4,7 +4,7 @@ import LeftComponent from "../LeftComponent/LeftComponent";
 import CenterComponent from "../CenterComponent/CenterComponent";
 import MeetupDetails from "../MeetupDetails/MeetupDetails";
 
-export default function AllThree({ meetups, filteredMeetups, user, comments, joinMeetup, clickedMeetup, rerender }) {
+export default function AllThree({ meetups, filteredMeetups, comments, joinMeetup, clickedMeetup, rerender }) {
 
     return (
       <div className="AllThree">

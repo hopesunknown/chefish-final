@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 
-export default function TestCard({ key, meetup, joinMeetup }) {
+export default function TestCard({ meetup, joinMeetup }) {
 
     const ref = useRef();
 
@@ -19,10 +19,11 @@ export default function TestCard({ key, meetup, joinMeetup }) {
     //     // and other props, which will go to div
     //     style={{ width: "200px", height: "200px", padding: "20px"}} /// these are optional style, it is not necessary
     //   >
-
+      
+    <div onClick={() => joinMeetup(meetup)}>
     <Flippy
-      flipOnHover={false} // default false
-      flipOnClick={true} // default false
+      flipOnHover={true} // default false
+      flipOnClick={false} // default false
       flipDirection="horizontal" // horizontal or vertical
       ref={ref} // to use toggle method like ref.curret.toggle()
       // if you pass isFlipped prop component will be controlled component.
@@ -46,7 +47,7 @@ export default function TestCard({ key, meetup, joinMeetup }) {
         
         <BackSide
           style={{
-            backgroundColor: "#264C99",
+            backgroundColor: "pink",
             // backgroundColor: "#000000",
             color: "#FFFFFF",
             textAlign: "center",
@@ -59,5 +60,6 @@ export default function TestCard({ key, meetup, joinMeetup }) {
           <h5>Topic: {meetup.topic.topic_name}</h5>
         </BackSide>
       </Flippy>
+      </div>
     );
   }

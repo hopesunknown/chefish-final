@@ -28,18 +28,17 @@ export default function Signup() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const body = this.state;
-
-    const configObj = {
+    fetch("/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify(body),
-    };
-
-    fetch(`http://localhost:3000/signup`, configObj)
+      body: JSON.stringify({
+        first_name: firstName,
+        email: email,
+        password: password
+      }),
+    })
       .then((resp) => resp.json())
       .then((user) => {
         if (user.id === undefined || user.id === 0) {
@@ -82,7 +81,7 @@ export default function Signup() {
                 onChange={handleNameChange}
               />
               <br />
-              <label>Email</label>
+              <label>Email:</label>
               <input
                className="SignUpInput"
                 type="text"

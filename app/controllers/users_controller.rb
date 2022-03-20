@@ -12,10 +12,10 @@ class UsersController < ApplicationController
     end
     
     def create
-        user = find_user
+        user = User.new(user_params)
         user.save
         params["topicArray"].each do  |topic| 
-        UserTopic.create!(user_id: user.id, topic_id: topic["id"])
+        UserTopic.create(user_id: user.id, topic_id: topic["id"])
         end
 
         if user.valid?

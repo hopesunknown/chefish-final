@@ -19,7 +19,7 @@ export default function MeetupDetails({ clickedMeetup, rerender }) {
       }),
     };
 
-    fetch("http://localhost:3000/join", configObj);
+    fetch("/join", configObj);
   };
 
   function handleCommentChange(event) {
@@ -44,7 +44,7 @@ export default function MeetupDetails({ clickedMeetup, rerender }) {
       body: JSON.stringify(body),
     };
 
-    fetch("http://localhost:3000/comments", configObj);
+    fetch("/comments", configObj);
     setContent(content);
     setTimeout(() => {
       rerender(clickedMeetup);
