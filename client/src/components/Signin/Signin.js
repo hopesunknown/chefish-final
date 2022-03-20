@@ -44,7 +44,7 @@ export default function Signin() {
       <Link to="/main" />
     ) : (
       <div>
-        THIS IS THE LOGIN PAGE
+        THIS IS THE SIGNIN PAGE
         <div className="NavBar">
           <ProfileNavBar />
           <SearchContainer />

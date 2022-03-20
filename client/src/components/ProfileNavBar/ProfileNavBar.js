@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import "../App.css";
+import "../../App.css";
 
 export default function ProfileNavBar() {
 
@@ -15,7 +15,7 @@ export default function ProfileNavBar() {
             Sign Up
           </Link>
           <br></br>
-          <Link to="/login">
+          <Link to="/signin">
             Login
           </Link>
         </div>

@@ -37,10 +37,355 @@
   }
 }
 
+.NavBar {
+  color: black;
+  background-color: white;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 9999;
+
+}
+
+.RightLinks {
+  background-color: #FFFFFF;
+}
+
+.SearchContainer {
+  background: linear-gradient(to right, #a81dc4 39%, #f39ce7 99%);
+  color: white;
+  padding: 30px;
+  margin-top: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 8888;
+}
+
 .AllThree {
   width: 100%;
   float: center;
   margin-top: 50px;
   padding: 30px;
   margin-top: 150px;
+}
+
+.LeftComponent {
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 20%;
+  float: left;
+  padding: 30px;
+  margin: 10px;
+}
+
+.CenterComponent {
+  background-color: white;
+  width: 40%;
+  float: left;
+  padding: 30px;
+  margin-top: 10px;
+  column-count: 3;
+  margin-left: 0px;
+}
+
+.RightComponent {
+  background-color: #FFFFFF;
+  width: 20%;
+  float: left;
+  padding: 30px;
+  margin: 10px;
+  text-align: center;
+}
+
+.Footer{
+  background-color: rgb(201, 132, 197);
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  /* padding-bottom: 20px; */
+}
+
+.NavLinks {
+  right: 0;
+  float: right;
+  padding: 20px;
+}
+
+.Logo {
+  left:0;
+  float: left;
+  margin-right: 120px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.Logo:hover {
+-webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+.SearchBar {
+  float: left;
+  padding: 40px;
+  margin-left: 0px;
+  margin-right: 10px;
+  width: 400px;
+}
+
+.Search:focus {
+  width: 100%;
+}
+
+.Submit {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Submit:hover {
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #33cccc;
+}
+
+.FlipCard{
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.FlipCard:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.CardBack {
+  background-color: rgb(194, 189, 189);
+  border: 1px dashed;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.Flippy {
+  z-index: 8888;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.MeetupCard {
+  background-color: #3366cc;
+  padding: 10px;
+  margin: 15px;
+  margin-bottom: 40px;
+  border-radius: 100px 0px;
+  text-align: center;
+  color: white;
+  height: 40px;
+  opacity:0.5;
+}
+
+  .MeetupCard:hover {
+    opacity:1;
+    border-radius:50%;
+    cursor: pointer;
+  }
+
+  a:link, a:visited {
+    color: black;
+    padding: 1px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a:hover, a:active {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+  }
+
+  .Signin {
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  .SignInBtn {
+    background-color: #aa6ba2;
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+  }
+
+  .Signup {
+    float: left;
+    width: 30%;
+    padding: 30px;
+    margin: 10px;
+    margin-left: 200px;
+  }
+
+  .Checkboxes {
+    float: left;
+    width: 30%;
+    padding: 30px;
+    margin-top: 220px;
+    column-count: 2;
+  }
+
+  .CommentCard:hover {
+    font-weight: 700;
+  }
+
+  .MeetupDetails {
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 50px;
+    margin-left: 30px;
+    
+  }
+
+  .CenterComponentProfile {
+    background-color: darkgrey;
+    width: 40%;
+    float: left;
+    padding: 30px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .ScrollingList {
+    padding-top: 600px;
+    animation: marquee infinite 60s linear;
+  }
+
+  @keyframes marquee {
+    0%   { 
+      -moz-transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0); }
+      100% { 
+      -moz-transform: translate(0, -100%);
+      -webkit-transform: translate(0, -100%);
+      transform: translate(0, -100%); }
+  }
+
+  .CreateMeetupBtn {
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .CreateMeetupBtn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3366cc;
+    color: white;
+  }
+
+  .MeetupForm {
+    width: 60%;
+    padding: 5px 20px;
+    margin: 8px 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  .MeetupForm:focus {
+    border: 2px solid black;
+  }
+
+  .OutsideForm {
+    border: 10px solid;
+    margin: 10px; 
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #33cccc;
+    color: white;
+  }
+
+  .OutsideForm:hover {
+    opacity:1;
+  }
+
+  .SignInForm {
+    width: 30%;
+    padding: 5px 20px;
+    margin: 8px 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  .SignInForm:focus {
+    border: 2px solid black;
+  }
+
+  .SignUpInput {
+    width: 30%;
+    padding: 5px 20px;
+    margin: 8px 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  .SignUpInput:focus {
+    border: 2px solid black;
+  }
+
+  .checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox > span {
+    color: #34495E;
+    padding: 0.5rem 0.23rem;
+}
+
+.checkbox > input {
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: pink;
+    cursor: pointer;
+  }
+
+.checkbox > input:checked {
+  border: 5px solid #3366cc;
+    /* border: 5px solid black; */
+    /* background-color: white; */
+    background-color:  #0AA685 ;
+}
+
+.checkbox > input:active {
+    border: 2px solid #34495E;
 }

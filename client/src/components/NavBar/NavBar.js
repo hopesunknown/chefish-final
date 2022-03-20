@@ -22,7 +22,7 @@ export default function NavBar({ searchWord, handleChange, userInfo }) {
           <br></br>
           <Link to="/profile">Profile</Link>
           <br></br>
-          <Link to="/login">Log Out</Link>
+          <Link to="/signin">Log Out</Link>
         </div>
       </div>
     </>
