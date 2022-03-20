@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Signup from "../src/components/Signup/Signup";
-import Login from "./components/Login/Login";
+import Login from "../src/components/Login/Login";
 import Profile from "../src/components/Profile/Profile";
 import MainPage from "../src/components/MainPage/MainPage";
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+// need to double-check this code
+
 export default function MeetupDetails({ clickedMeetup, rerender }) {
   const [content, setContent] = useState("");
 
