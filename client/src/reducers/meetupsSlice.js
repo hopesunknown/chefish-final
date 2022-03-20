@@ -4,7 +4,7 @@ export const fetchMeetups = createAsyncThunk("meetups/fetchMeetups", () => {
   // return a Promise containing the data we want
   return fetch("/meetups")
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => data)
 });
 
 const meetupsSlice = createSlice({
