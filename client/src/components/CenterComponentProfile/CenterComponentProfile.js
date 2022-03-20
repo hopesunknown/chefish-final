@@ -19,7 +19,7 @@ export default function CenterComponentProfile({ userDetails, handleClick }) {
               Here are the classes you have joined and the cuisines you've chosen.
             </p>
             <br />
-            <p style={{fontStyle:"italic"}}>Stay tuned for more app features in the near future</p>
+            <p>Stay tuned for more app features in the near future</p>
           </div>
         </div>
       </div>
