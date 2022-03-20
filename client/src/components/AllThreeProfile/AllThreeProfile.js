@@ -1,61 +1,46 @@
-import React from 'react'
-
-export default function AllThreeProfile({ userInfo, rerender }) {
-  return (
-    <div>AllThreeProfile</div>
-  )
-}
-
 import React, { useState } from "react";
 import LeftComponentProfile from "../LeftComponentProfile/LeftComponentProfile";
 import RightComponent from "../RightComponent/RightComponent";
 import CenterComponentProfile from "../CenterComponentProfile/CenterComponentProfile";
 import NewMeetupForm from "../NewMeetupForm/NewMeetupForm";
 
-class AllThreeProfile extends Component {
-  constructor() {
-    super();
+export default function AllThreeProfile({ userInfo, rerender }) {
+  const [clicked, setClicked] = useState(false);
 
-    this.state = {
-      clicked: false,
-    };
-  }
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
+  function handleClick() {
+    setClicked(!clicked);
   };
 
-  render() {
     const user = {
-      id: this.props.userInfo.id,
-      first_name: this.props.userInfo.first_name,
-      email: this.props.userInfo.email,
-      password: this.props.userInfo.password,
-      meetups: this.props.userInfo.meetups,
-      topics: this.props.userInfo.topics,
+      id: userInfo.id,
+      first_name: userInfo.first_name,
+      email: userInfo.email,
+      password: userInfo.password,
+      meetups: userInfo.meetups,
+      topics: userInfo.topics,
     };
+
     return (
       <div className="AllThree">
         <LeftComponentProfile
           userMeetups={user.meetups}
-          rerender={this.props.rerender}
+          rerender={rerender}
         />
-        {this.state.clicked ? (
-          <NewMeetupForm rerender={this.props.rerender}/>
+        {clicked ? (
+          <NewMeetupForm rerender={rerender}/>
         ) : (
           <CenterComponentProfile
             userDetails={user}
-            handleClick={this.handleClick}
-            rerender={this.props.rerender}
+            handleClick={handleClick}
+            rerender={rerender}
           />
         )}
 
         <RightComponent
-          userTopics={this.props.userInfo.topics}
-          user={this.props.userInfo}
-          rerender={this.props.rerender}
+          userTopics={userInfo.topics}
+          user={userInfo}
+          rerender={rerender}
         />
       </div>
     );
   }
-}
-export default AllThreeProfile;
