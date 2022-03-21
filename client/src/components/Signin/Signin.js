@@ -42,7 +42,12 @@ export default function Signin() {
   return (
   
     loggedIn ? (
-      <Navigate to="/main" />
+      <Navigate to="/main" 
+        firstName={firstName} 
+        email={email} 
+        password={password} 
+        loggedIn={loggedIn} 
+        />
     ) : (
       <div>
         THIS IS THE SIGNIN PAGE

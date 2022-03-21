@@ -7,11 +7,11 @@ import SearchContainerProfile from '../SearchContainerProfile/SearchContainerPro
 export default function Profile() {
   const [user, setUser] = useState({});
 
-  function componentDidMount() {
+  useEffect(() => {
         fetch(`/users/${window.userId}`)
           .then((response) => response.json())
           .then((user) => setUser(user));
-  }
+  }, []);
 
   function rerender(){
         fetch(`/users/${window.userId}`)
