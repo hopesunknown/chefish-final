@@ -4,11 +4,11 @@ import Footer from "../Footer/Footer";
 import AllThreeProfile from "../AllThreeProfile/AllThreeProfile";
 // import SearchContainerProfile from '../SearchContainerProfile/SearchContainerProfile';
 
-export default function Profile() {
-  const [user, setUser] = useState({});
+export default function Profile({ user, setUser }) {
 
   useEffect(() => {
-        fetch(`/users/${window.userId}`)
+    console.log(user)
+        fetch(`/users/${user.id}`)
           .then((response) => response.json())
           .then((user) => setUser(user));
   }, []);

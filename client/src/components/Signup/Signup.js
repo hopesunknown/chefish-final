@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import Checkboxes from "../Checkboxes/Checkboxes";
 
-export default function Signup() {
+export default function Signup({ user, setUser }) {
 
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :meetups
   resources :users
   
+    get "/me", to: "users#show"
     post '/signup', to: 'users#create'
     post '/users/login', to: 'users#login'
     post '/join', to: 'users#joinMeetup'

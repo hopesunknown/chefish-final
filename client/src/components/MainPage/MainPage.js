@@ -6,10 +6,10 @@ import AllThree from "../AllThree/AllThree";
 
 const userId = 0;
 
-export default function MainPage() {
+export default function MainPage({ user, setUser }) {
   const [meetups, setMeetups] = useState([]);
   const [searchWord, setSearchWord] = useState("");
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const [comments, setComments] = useState([]);
   const [clickedMeetup, setClickedMeetup] = useState(null);
 
@@ -19,11 +19,11 @@ export default function MainPage() {
       .then((meetups) => setMeetups(meetups));
   }, []);
 
-  useEffect(() => {
-    fetch(`/users/${window.userId}`)
-      .then((response) => response.json())
-      .then((user) => setUser(user));
-  }, []);
+  // useEffect(() => {
+  //   fetch(`/users/${window.userId}`)
+  //     .then((response) => response.json())
+  //     .then((user) => setUser(user));
+  // }, []);
 
   useEffect(() => {
     fetch("/comments")
@@ -31,7 +31,7 @@ export default function MainPage() {
       .then((comments) => setComments(comments));
   }, []);
 
-  function rerender(clickedMeetup) {
+  function handleClickedMeetup(clickedMeetup) {
     fetch(`/meetups/${clickedMeetup.id}`)
       .then((response) => response.json())
       .then((meetup) => setClickedMeetup(meetup));
@@ -67,7 +67,7 @@ export default function MainPage() {
           comments={comments}
           joinMeetup={joinMeetup}
           clickedMeetup={clickedMeetup}
-          rerender={rerender}
+          handleClickedMeetup={handleClickedMeetup}
         />
         <Footer />
       </div>

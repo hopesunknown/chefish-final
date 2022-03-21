@@ -8,7 +8,8 @@ import Profile from "../src/components/Profile/Profile";
 import MainPage from "../src/components/MainPage/MainPage";
 
 function App() {
-  
+  const [user, setUser] = useState(null);
+  // const [currentUser, setCurrentUser] = useState({})
 
   // useEffect(() => {
   //   fetch("/users")
@@ -20,17 +21,27 @@ function App() {
   //   });
   // }, []);
 
+  useEffect(() => {
+    fetch("/me")
+      .then((response) => response.json())
+      .then((user) => setUser(user));
+  }, []);
 
+  // function handleLogin(value){
+  //   setCurrentUser(value)
+  //   localStorage.setItem('id', value.id)
+  // }
   return (
     <>
       <div className="App">
         {/* <MainPage /> */}
+        
         <Routes>
-          <Route exact path="/signin" element={<Signin />} />
-          <Route exact path="/profile" element={<Profile />} />
-          <Route exact path="/main" element={<MainPage />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/" element={<Signin />} />    
+          <Route exact path="/signin" element={<Signin user={user} setUser={setUser} />} />
+          <Route exact path="/profile" element={<Profile user={user} setUser={setUser} />} />
+          <Route exact path="/main" element={<MainPage user={user} setUser={setUser} />} />
+          <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
+          <Route exact path="/" element={<Signin user={user} setUser={setUser} />} />    
         </Routes>
       </div>
     </>

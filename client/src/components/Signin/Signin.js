@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 
 
-export default function Signin() {
+export default function Signin({ user, setUser, handleLogin }) {
 
     const [firstName, setFirstName] = useState("");
     const [email, setEmail] = useState("");
@@ -28,13 +28,15 @@ export default function Signin() {
       }),
     })
       .then((response) => response.json())
-      .then((user) => {
-        if (user.id === undefined || user.id === 0) {
+      .then((data) => {
+        if (data.id === undefined || data.id === 0) {
           console.log("Not logged in");
         } else {
           console.log("logged in");
           setLoggedIn(true);
-          window.userId = user.id;
+          setUser(data)
+          // window.userId = user.id;
+          // handleLogin(user)
         }
       });
   };
