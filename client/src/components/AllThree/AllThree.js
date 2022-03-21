@@ -4,7 +4,7 @@ import LeftComponent from "../LeftComponent/LeftComponent";
 import CenterComponent from "../CenterComponent/CenterComponent";
 import MeetupDetails from "../MeetupDetails/MeetupDetails";
 
-export default function AllThree({ meetups, filteredMeetups, comments, joinMeetup, clickedMeetup, rerender }) {
+export default function AllThree({ user, meetups, filteredMeetups, comments, joinMeetup, clickedMeetup, handleClickedMeetup }) {
 
     return (
       <div className="AllThree">
@@ -18,8 +18,9 @@ export default function AllThree({ meetups, filteredMeetups, comments, joinMeetu
           joinMeetup={joinMeetup}
         />
         <MeetupDetails
+          user={user}
           clickedMeetup={clickedMeetup}
-          rerender={rerender}
+          handleClickedMeetup={handleClickedMeetup}
         />
       </div>
     );

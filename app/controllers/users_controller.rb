@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
     def loggedInUser 
         user = User.find(session[:id])
-        byebug
         render json: user
     end
 

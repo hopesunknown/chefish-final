@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-export default function MeetupDetails({ clickedMeetup, rerender }) {
+export default function MeetupDetails({ user, clickedMeetup, handleClickedMeetup }) {
   const [content, setContent] = useState("");
+  const [userId, setUserId] = useState(user.id);
 
   function handleClick(clickedMeetup) {
     alert("Meetup Saved!");
@@ -12,7 +13,7 @@ export default function MeetupDetails({ clickedMeetup, rerender }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_id: window.userId,
+        user_id: userId,
         meetup_id: clickedMeetup.id
       }),
     })
@@ -31,14 +32,14 @@ export default function MeetupDetails({ clickedMeetup, rerender }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_id: window.userId,
+        user_id: userId,
         meetup_id: clickedMeetup.id,
         content: content,
       }),
     })
     setContent(content);
     setTimeout(() => {
-      rerender(clickedMeetup);
+      handleClickedMeetup(clickedMeetup);
     }, 1000);
   };
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import AllThreeProfile from "../AllThreeProfile/AllThreeProfile";
-import SearchContainerProfile from '../SearchContainerProfile/SearchContainerProfile';
+// import SearchContainerProfile from '../SearchContainerProfile/SearchContainerProfile';
 
 export default function Profile() {
   const [user, setUser] = useState({});
@@ -25,9 +25,9 @@ export default function Profile() {
                 <NavBar
                   userInfo={user}
                 />
-                <SearchContainerProfile
-                  userInfo={user}
-                />
+                {/* <SearchContainerProfile
+                  userInfo={user} */}
+                {/* // /> */}
                 <AllThreeProfile
                   userInfo={user}
                   rerender={rerender}

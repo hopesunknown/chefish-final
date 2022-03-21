@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
-import SearchContainer from "../SearchContainer/SearchContainer";
+// import SearchContainer from "../SearchContainer/SearchContainer";
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 
@@ -34,7 +34,7 @@ export default function Signin() {
         } else {
           console.log("logged in");
           setLoggedIn(true);
-          // window.userId = user.id;
+          window.userId = user.id;
         }
       });
   };
@@ -53,7 +53,7 @@ export default function Signin() {
         THIS IS THE SIGNIN PAGE
         <div className="NavBar">
           <ProfileNavBar />
-          <SearchContainer />
+          {/* <SearchContainer /> */}
           <div className="Logo">
             {/* <img src="/logo1.png" alt="logo" width="100" /> */}
           </div>

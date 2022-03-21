@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import SearchContainer from "../SearchContainer/SearchContainer";
+import { Navigate } from "react-router-dom";
+// import SearchContainer from "../SearchContainer/SearchContainer";
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import Checkboxes from "../Checkboxes/Checkboxes";
@@ -41,12 +41,12 @@ export default function Signup() {
     })
       .then((resp) => resp.json())
       .then((user) => {
-        // if (user.id === undefined || user.id === 0) {
-        //   console.log("Not logged in");
-        // } else {
+        if (user.id === undefined || user.id === 0) {
+          console.log("Not logged in");
+        } else {
           setLoggedIn(true);
-          // window.userId = user.id;
-        // }
+          window.userId = user.id;
+        }
       });
   };
 
@@ -56,13 +56,18 @@ export default function Signup() {
 
     return (
       loggedIn ? (
-      <Link to="/main" />
+        <Navigate to="/main" 
+        firstName={firstName} 
+        email={email} 
+        password={password} 
+        loggedIn={loggedIn} 
+        />
     ) : (
       <div>
         THIS IS THE SIGNUP PAGE
         <div className="NavBar">
           <ProfileNavBar />
-          <SearchContainer />
+          {/* <SearchContainer /> */}
           <div className="Logo">
             {/* <img src="/logo1.png" alt="logo" width="100" /> */}
           </div>
