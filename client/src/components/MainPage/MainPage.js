@@ -20,12 +20,10 @@ export default function MainPage() {
   }, []);
 
   useEffect(() => {
-    fetch("/users")
+    fetch(`/users/${window.userId}`)
       .then((response) => response.json())
       .then((user) => setUser(user));
   }, []);
-
-  //inside users fetch: window.userId
 
   useEffect(() => {
     fetch("/comments")

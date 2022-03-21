@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import SearchContainer from "../SearchContainer/SearchContainer";
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
@@ -14,8 +14,7 @@ export default function Signin() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    setLoggedIn(true);
-    // const body = this.state;
+    // setLoggedIn(true);
 
     fetch("/users/login", {
       method: "POST",
@@ -23,25 +22,27 @@ export default function Signin() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ 
-        firstName, 
-        email, 
-        password 
+        first_name: firstName, 
+        email: email, 
+        password: password
       }),
     })
-      .then((resp) => resp.json())
+      .then((response) => response.json())
       .then((user) => {
         if (user.id === undefined || user.id === 0) {
           console.log("Not logged in");
         } else {
+          console.log("logged in");
           setLoggedIn(true);
-          window.userId = user.id;
+          // window.userId = user.id;
         }
       });
   };
 
   return (
+  
     loggedIn ? (
-      <Link to="/main" />
+      <Navigate to="/main" />
     ) : (
       <div>
         THIS IS THE SIGNIN PAGE
@@ -87,5 +88,6 @@ export default function Signin() {
         <Footer />
       </div>
     )
+  
   )
 }

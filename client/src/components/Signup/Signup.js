@@ -41,13 +41,12 @@ export default function Signup() {
     })
       .then((resp) => resp.json())
       .then((user) => {
-        if (user.id === undefined || user.id === 0) {
-          console.log("Not logged in");
-        } else {
-          console.log("login");
+        // if (user.id === undefined || user.id === 0) {
+        //   console.log("Not logged in");
+        // } else {
           setLoggedIn(true);
-          window.userId = user.id;
-        }
+          // window.userId = user.id;
+        // }
       });
   };
 
@@ -60,7 +59,7 @@ export default function Signup() {
       <Link to="/main" />
     ) : (
       <div>
-        THIS IS THE SIGN UP PAGE
+        THIS IS THE SIGNUP PAGE
         <div className="NavBar">
           <ProfileNavBar />
           <SearchContainer />

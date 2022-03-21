@@ -4,20 +4,28 @@ Rails.application.routes.draw do
   resources :topics
   resources :meetups
   resources :users
+  
+    post '/signup', to: 'users#create'
+    post '/users/login', to: 'users#login'
+    post '/join', to: 'users#joinMeetup'
+  
+    delete 'usertopic/delete', to: 'users#deleteTopic'
+    delete '/usermeetup/delete', to: 'users#leaveMeetup'
+    get '/loggedInUser', to: 'users#loggedInUser'
 
-  # get "/me", to: "users#show"
-  get '/loggedInUser', to: 'users#loggedInUser'
+  # # get "/me", to: "users#show"
+  # get '/loggedInUser', to: 'users#loggedInUser'
 
-  # post "/login", to: "sessions#login"
-  delete "/logout", to: "sessions#logout"
+  # # post "/login", to: "sessions#login"
+  # delete "/logout", to: "sessions#logout"
 
 
-  post '/signup', to: 'users#create'
-  post '/users/login', to: 'sessions#login'
-  post '/join', to: 'users#joinMeetup'
+  # post '/signup', to: 'users#create'
+  # post '/users/login', to: 'sessions#login'
+  # post '/join', to: 'users#joinMeetup'
 
-  delete 'usertopic/delete', to: 'users#deleteTopic'
-  delete '/usermeetup/delete', to: 'users#leaveMeetup'
+  # delete 'usertopic/delete', to: 'users#deleteTopic'
+  # delete '/usermeetup/delete', to: 'users#leaveMeetup'
  
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
