@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function MeetupDetails({ user, setUser, clickedMeetup, handleClickedMeetup }) {
   const [content, setContent] = useState("");
-  const [userId, setUserId] = useState(user.id);
+  // const [userId, setUserId] = useState(user.id);
 
   function handleClick(clickedMeetup) {
     alert("Meetup Saved!");
@@ -13,7 +13,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_id: userId,
+        user_id: user.id,
         meetup_id: clickedMeetup.id
       }),
     })
@@ -32,7 +32,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_id: userId,
+        user_id: user.id,
         meetup_id: clickedMeetup.id,
         content: content,
       }),
