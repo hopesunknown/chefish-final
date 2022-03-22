@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SearchBar({ searchWord, handleChange }) {
+export default function SearchBar({ searchWord, handleChange, meetups, setMeetups }) {
 
     return (
       <div>
@@ -8,7 +8,8 @@ export default function SearchBar({ searchWord, handleChange }) {
           <label>
           <span className="iconify" data-icon="et-magnifying-glass" data-inline="false"></span>
           Search cooking classes:
-            <input  className="Search"
+            <input  
+              className="Search"
               type="text"
               name="name"
               onChange={(event) => handleChange(event)}

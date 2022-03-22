@@ -9,6 +9,7 @@ import MainPage from "../src/components/MainPage/MainPage";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [meetups, setMeetups] = useState([]);
   // const [currentUser, setCurrentUser] = useState({})
 
   // useEffect(() => {
@@ -27,6 +28,12 @@ function App() {
       .then((user) => setUser(user));
   }, []);
 
+  useEffect(() => {
+    fetch("/meetups")
+      .then((response) => response.json())
+      .then((meetups) => setMeetups(meetups));
+  }, []);
+
   // function handleLogin(value){
   //   setCurrentUser(value)
   //   localStorage.setItem('id', value.id)
@@ -38,8 +45,8 @@ function App() {
         
         <Routes>
           <Route exact path="/signin" element={<Signin user={user} setUser={setUser} />} />
-          <Route exact path="/profile" element={<Profile user={user} setUser={setUser} />} />
-          <Route exact path="/main" element={<MainPage user={user} setUser={setUser} />} />
+          <Route exact path="/profile" element={<Profile user={user} setUser={setUser} meetups={meetups} setMeetups={setMeetups} />} />
+          <Route exact path="/main" element={<MainPage user={user} setUser={setUser} meetups={meetups} setMeetups={setMeetups} />} />
           <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
           <Route exact path="/" element={<Signin user={user} setUser={setUser} />} />    
         </Routes>

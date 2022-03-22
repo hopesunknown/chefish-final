@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import AllThreeProfile from "../AllThreeProfile/AllThreeProfile";
 // import SearchContainerProfile from '../SearchContainerProfile/SearchContainerProfile';
 
-export default function Profile({ user, setUser }) {
+export default function Profile({ user, setUser, meetups, setMeetups }) {
 
   useEffect(() => {
     console.log(user)
@@ -22,9 +22,12 @@ export default function Profile({ user, setUser }) {
     return (
             <div>
                 THIS IS THE PROFILE PAGE
+                
                 <NavBar
                   userInfo={user}
                   setUser={setUser}
+                  meetups={meetups}
+                  setMeetups={setMeetups}
                 />
                 {/* <SearchContainerProfile
                   userInfo={user} */}
@@ -32,11 +35,15 @@ export default function Profile({ user, setUser }) {
                 <AllThreeProfile
                   userInfo={user}
                   setUser={setUser}
+                  meetups={meetups}
+                  setMeetups={setMeetups}
                   // rerender={rerender}
                 />
                 <Footer
                   userInfo={user}
                   setUser={setUser}
+                  meetups={meetups}
+                  setMeetups={setMeetups}
                 />
             </div>
         );

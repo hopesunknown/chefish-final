@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import "../src/App.css";
 import SearchBar from "../SearchBar/SearchBar";
 
-export default function NavBar({ searchWord, handleChange, userInfo, user, setUser }) {
+export default function NavBar({ searchWord, handleChange, userInfo, user, setUser, meetups, setMeetups }) {
   
     return (
     <>
@@ -15,6 +15,8 @@ export default function NavBar({ searchWord, handleChange, userInfo, user, setUs
           <SearchBar
             searchWord={searchWord}
             handleChange={handleChange}
+            meetups={meetups}
+            setMeetups={setMeetups}
           />
         </div>
         <div className="NavLinks">

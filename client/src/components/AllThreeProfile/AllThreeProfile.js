@@ -4,7 +4,7 @@ import RightComponent from "../RightComponent/RightComponent";
 import CenterComponentProfile from "../CenterComponentProfile/CenterComponentProfile";
 import NewMeetupForm from "../NewMeetupForm/NewMeetupForm";
 
-export default function AllThreeProfile({ userInfo, setUser }) {
+export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups }) {
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {

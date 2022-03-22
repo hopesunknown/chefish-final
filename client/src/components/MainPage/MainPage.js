@@ -6,18 +6,18 @@ import AllThree from "../AllThree/AllThree";
 
 const userId = 0;
 
-export default function MainPage({ user, setUser }) {
-  const [meetups, setMeetups] = useState([]);
+export default function MainPage({ user, setUser, meetups, setMeetups }) {
+  // const [meetups, setMeetups] = useState([]);
   const [searchWord, setSearchWord] = useState("");
   // const [user, setUser] = useState({});
   const [comments, setComments] = useState([]);
   const [clickedMeetup, setClickedMeetup] = useState(null);
 
-  useEffect(() => {
-    fetch("/meetups")
-      .then((response) => response.json())
-      .then((meetups) => setMeetups(meetups));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/meetups")
+  //     .then((response) => response.json())
+  //     .then((meetups) => setMeetups(meetups));
+  // }, []);
 
   // useEffect(() => {
   //   fetch(`/users/${window.userId}`)
@@ -61,9 +61,12 @@ export default function MainPage({ user, setUser }) {
           handleChange={handleChange}
           user={user}
           setUser={setUser}
+          meetups={meetups}
+          setMeetups={setMeetups}
         />
         <AllThree
           meetups={meetups}
+          setMeetups={setMeetups}
           filteredMeetups={filteredMeetups}
           user={user}
           setUser={setUser}
