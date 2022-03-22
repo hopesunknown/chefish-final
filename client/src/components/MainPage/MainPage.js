@@ -38,7 +38,7 @@ export default function MainPage({ user, setUser }) {
   };
 
   function handleChange(event) {
-      setSearchWord(event)
+      setSearchWord(event.target.value)
   };
 
   function joinMeetup(meetup){
