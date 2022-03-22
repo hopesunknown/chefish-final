@@ -75,7 +75,7 @@ class UsersController < ApplicationController
 
         # UserMeetup.create(user_id: params[:user_id], meetup_id: params[:meetup_id])
 
-        um = UserMeetup.find_by(user_id: params[:user_id], meetup_id: params[:meetup_id])
+        um = UserMeetup.find(params[:id])
         # um = UserMeetup.find(params[:user_id, :meetup_id])
         um.destroy
         head :no_content

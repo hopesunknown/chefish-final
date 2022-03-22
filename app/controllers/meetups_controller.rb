@@ -12,8 +12,9 @@ class MeetupsController < ApplicationController
 
     def create 
         meetup = Meetup.create!(meetup_params)
-        UserMeetup.create(user_id: params[:user_id], meetup_id:meetup.id)
         render json: meetup, status: :created
+        # UserMeetup.create(user_id: params[:user_id], meetup_id:meetup.id)
+        # render json: meetup, status: :created
     end
 
     def edit 
@@ -46,6 +47,6 @@ class MeetupsController < ApplicationController
     end
 
     def meetup_params 
-        params.require(:meetup).permit(:topic_id,  :comment_ids, :user_ids, :title, :date, :time, :location, :image)
+        params.permit(:topic_id, :title, :date, :time, :location, :image)
     end
 end

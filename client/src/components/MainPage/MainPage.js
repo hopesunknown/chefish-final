@@ -19,12 +19,6 @@ export default function MainPage({ user, setUser, meetups, setMeetups }) {
   //     .then((meetups) => setMeetups(meetups));
   // }, []);
 
-  // useEffect(() => {
-  //   fetch(`/users/${window.userId}`)
-  //     .then((response) => response.json())
-  //     .then((user) => setUser(user));
-  // }, []);
-
   useEffect(() => {
     fetch("/comments")
       .then((response) => response.json())

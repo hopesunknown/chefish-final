@@ -52,15 +52,15 @@ export default function NewMeetupForm({ user, setUser }){
             location: location,
             image: image,
             topic_id: topicId,
-            user_id: userId
+            // user_id: userId
         }),
         }
     );
     setTimeout(() => {
-    setUser(user);
+    // setUser(user);
     }, 1000);
   };
-
+console.log(topicId)
     return (
       <div className="CenterComponentProfile">
         <div className="SpacingDiv">

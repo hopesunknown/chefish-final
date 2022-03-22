@@ -5,7 +5,7 @@ export default function LeftComponentProfile({ userMeetups, userInfo, setUser, u
   const [userMeetup, setUserMeetup] = useState([]);
   const [refreshed, setRefreshed] = useState(false);
 
-  function componentDidMount() {
+  function componentMount() {
     setUserMeetup(userMeetups);
   }
 
