@@ -11,21 +11,28 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
     setClicked(!clicked);
   };
 
+  console.log(userInfo);
+  console.log(meetups);
+
     const user = {
       id: userInfo.id,
       first_name: userInfo.first_name,
       email: userInfo.email,
       password: userInfo.password,
       meetups: userInfo.meetups,
-      topics: userInfo.topics,
+      topics: userInfo.topics
     };
+    
 
     return (
       <div className="AllThree">
         <LeftComponentProfile
-        user={userInfo}
+        userInfo={userInfo}
         setUser={setUser}
           userMeetups={user.meetups}
+          userDetails={user}
+          meetups={meetups}
+          setMeetups={setMeetups}
         />
         {clicked ? (
           <NewMeetupForm user={userInfo} setUser={setUser}/>

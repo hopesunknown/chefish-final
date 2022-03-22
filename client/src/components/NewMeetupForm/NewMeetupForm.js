@@ -10,7 +10,7 @@ export default function NewMeetupForm({ user, setUser }){
     const [location, setLocation] = useState("");
     const [image, setImage] = useState("");
     const [topicId, setTopicId] = useState(0);
-    // const [userId, setUserId] = useState(window.userId);
+    const [userId, setUserId] = useState(user.id);
 
   function handleTitleChange(event){
     setTitle(event.target.value);
@@ -51,6 +51,8 @@ export default function NewMeetupForm({ user, setUser }){
             time: time,
             location: location,
             image: image,
+            topic_id: topicId,
+            user_id: userId
         }),
         }
     );

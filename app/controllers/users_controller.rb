@@ -75,14 +75,17 @@ class UsersController < ApplicationController
 
         # UserMeetup.create(user_id: params[:user_id], meetup_id: params[:meetup_id])
 
-        um = UserMeetup.find_by(user_id: params[:user_id], meetup_id: params[:meetup_id])
-        um.delete
+        # um = UserMeetup.find_by(user_id: params[:user_id], meetup_id: params[:meetup_id])
+        um = UserMeetup.find(params[:user_id, :meetup_id])
+        um.destroy
+        head :no_content
     end
 
     def deleteTopic
-      
-        topic = UserTopic.find_by(user_id: params[:user_id], topic_id: params[:topic_id])
-        topic.delete
+        # topic = UserTopic.find_by(user_id: params[:user_id], topic_id: params[:topic_id])
+        topic = UserTopic.find(params[:user_id, :topic_id])
+        topic.destroy
+        head :no_content
     end
 
     def destroy
