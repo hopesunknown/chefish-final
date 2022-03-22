@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CenterComponentProfile({ userDetails, handleClick }) {
+export default function CenterComponentProfile({ userDetails, handleClick, user, setUser }) {
 
     return (
       <div className="CenterComponentProfile">

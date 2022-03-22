@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function NewMeetupForm({ rerender }){
+export default function NewMeetupForm({ user, setUser }){
 
     const [title, setTitle] = useState("");
     const [date, setDate] = useState("");
@@ -10,7 +10,7 @@ export default function NewMeetupForm({ rerender }){
     const [location, setLocation] = useState("");
     const [image, setImage] = useState("");
     const [topicId, setTopicId] = useState(0);
-    const [userId, setUserId] = useState(window.userId);
+    // const [userId, setUserId] = useState(window.userId);
 
   function handleTitleChange(event){
     setTitle(event.target.value);
@@ -55,7 +55,7 @@ export default function NewMeetupForm({ rerender }){
         }
     );
     setTimeout(() => {
-      rerender();
+    setUser(user);
     }, 1000);
   };
 
