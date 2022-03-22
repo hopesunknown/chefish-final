@@ -4,7 +4,7 @@ import RightComponent from "../RightComponent/RightComponent";
 import CenterComponentProfile from "../CenterComponentProfile/CenterComponentProfile";
 import NewMeetupForm from "../NewMeetupForm/NewMeetupForm";
 
-export default function AllThreeProfile({ userInfo, rerender }) {
+export default function AllThreeProfile({ userInfo, setUser }) {
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
@@ -23,23 +23,27 @@ export default function AllThreeProfile({ userInfo, rerender }) {
     return (
       <div className="AllThree">
         <LeftComponentProfile
+        user={userInfo}
+        setUser={setUser}
           userMeetups={user.meetups}
-          rerender={rerender}
+          // rerender={rerender}
         />
         {clicked ? (
-          <NewMeetupForm rerender={rerender}/>
+          <NewMeetupForm user={userInfo} setUser={setUser}/>
         ) : (
           <CenterComponentProfile
             userDetails={user}
             handleClick={handleClick}
-            rerender={rerender}
+            // rerender={rerender}
           />
         )}
 
         <RightComponent
           userTopics={userInfo.topics}
+          // user={user}
           user={userInfo}
-          rerender={rerender}
+          setUser={setUser}
+          // rerender={rerender}
         />
       </div>
     );

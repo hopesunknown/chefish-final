@@ -13,27 +13,30 @@ export default function Profile({ user, setUser }) {
           .then((user) => setUser(user));
   }, []);
 
-  function rerender(){
-        fetch(`/users/${window.userId}`)
-          .then((response) => response.json())
-          .then((user) => setUser(user));
-  }
+  // function rerender(){
+  //       fetch(`/users/${window.userId}`)
+  //         .then((response) => response.json())
+  //         .then((user) => setUser(user));
+  // }
         
     return (
             <div>
                 THIS IS THE PROFILE PAGE
                 <NavBar
                   userInfo={user}
+                  setUser={setUser}
                 />
                 {/* <SearchContainerProfile
                   userInfo={user} */}
                 {/* // /> */}
                 <AllThreeProfile
                   userInfo={user}
-                  rerender={rerender}
+                  setUser={setUser}
+                  // rerender={rerender}
                 />
                 <Footer
                   userInfo={user}
+                  setUser={setUser}
                 />
             </div>
         );

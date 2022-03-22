@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import MeetupCard from "../MeetupCard/MeetupCard";
 
-export default function LeftComponentProfile({ userMeetups, rerender }) {
+export default function LeftComponentProfile({ userMeetups, userInfo, setUser }) {
   const [userMeetup, setUserMeetup] = useState([]);
   const [refreshed, setRefreshed] = useState(false);
 
@@ -24,7 +24,6 @@ export default function LeftComponentProfile({ userMeetups, rerender }) {
     setUserMeetup(userMeetup);
 
     fetch("/usermeetup/delete", configObj);
-    rerender();
   };
 
     return (
