@@ -4,7 +4,7 @@ class Meetup < ApplicationRecord
     belongs_to :topic, dependent: :destroy 
     has_many :comments
 
-    validates :title, presence: true
-    validates :date, presence: true
-    validates :time, presence: true
+    # validates :title, presence: true
+    # validates :date, presence: true
+    # validates :time, presence: true
 end

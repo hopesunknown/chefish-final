@@ -12,11 +12,12 @@ class CommentsController < ApplicationController
             :include => [:user, :meetup])
     end
 
-    def create 
+    def create
         comment = Comment.create!(
-            content: params[:comment][:content],
-            user_id: params[:user_id],
-            meetup_id: params[:meetup_id]
+            # content: params[:comment][:content],
+            # user_id: params[:user_id],
+            # meetup_id: params[:meetup_id]
+            comment_params
         )
         render json: comment
     end
@@ -49,6 +50,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-        params.permit(:user_id, :meetup_id, :content, :rating)
+        params.permit(:user_id, :meetup_id, :content)
     end
 end
