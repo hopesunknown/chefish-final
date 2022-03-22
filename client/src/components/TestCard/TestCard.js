@@ -21,7 +21,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
         <FrontSide
           style={{
             backgroundColor: "transparent",
-            borderRadius: "15px",
+            borderRadius: "10px",
           }}
         >
           <img
@@ -30,7 +30,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
             width="180"
             height="180"
           />
-          <button onClick={() => { ref.current.toggle(); }}> Toggle via button</button>
+          {/* <button onClick={() => { ref.current.toggle(); }}></button> */}
         </FrontSide>
         
         <BackSide
