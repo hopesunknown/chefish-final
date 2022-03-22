@@ -3,7 +3,7 @@ import TestCard from "../TestCard/TestCard";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMeetups } from "../../reducers/meetupsSlice";
 
-export default function MeetupList({ meetups, joinMeetup }) {
+export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
   const selectMeetup = useSelector((state) => state.meetups.entities);
 
   const dispatch = useDispatch();
@@ -25,6 +25,8 @@ export default function MeetupList({ meetups, joinMeetup }) {
                   key={meetup.id}
                   meetup={meetup}
                   joinMeetup={joinMeetup}
+                  user={user}
+                  setUser={setUser}
                 />
               );
             })}

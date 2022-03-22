@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CommentCard({ comment }) {
+export default function CommentCard({ comment, user, setUser }) {
 
         return (
             <div className="CommentCard">

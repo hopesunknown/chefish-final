@@ -59,17 +59,20 @@ export default function MainPage({ user, setUser }) {
         <NavBar
           searchWord={searchWord}
           handleChange={handleChange}
+          user={user}
+          setUser={setUser}
         />
         <AllThree
           meetups={meetups}
           filteredMeetups={filteredMeetups}
           user={user}
+          setUser={setUser}
           comments={comments}
           joinMeetup={joinMeetup}
           clickedMeetup={clickedMeetup}
           handleClickedMeetup={handleClickedMeetup}
         />
-        <Footer />
+        <Footer user={user} setUser={setUser} />
       </div>
     );
   }

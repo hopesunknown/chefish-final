@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-export default function MeetupDetails({ user, clickedMeetup, handleClickedMeetup }) {
+export default function MeetupDetails({ user, setUser, clickedMeetup, handleClickedMeetup }) {
   const [content, setContent] = useState("");
   const [userId, setUserId] = useState(user.id);
 
