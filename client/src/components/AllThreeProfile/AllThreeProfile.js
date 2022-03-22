@@ -26,7 +26,6 @@ export default function AllThreeProfile({ userInfo, setUser }) {
         user={userInfo}
         setUser={setUser}
           userMeetups={user.meetups}
-          // rerender={rerender}
         />
         {clicked ? (
           <NewMeetupForm user={userInfo} setUser={setUser}/>
@@ -34,16 +33,15 @@ export default function AllThreeProfile({ userInfo, setUser }) {
           <CenterComponentProfile
             userDetails={user}
             handleClick={handleClick}
-            // rerender={rerender}
+            user={userInfo}
+            setUser={setUser}
           />
         )}
 
         <RightComponent
           userTopics={userInfo.topics}
-          // user={user}
           user={userInfo}
           setUser={setUser}
-          // rerender={rerender}
         />
       </div>
     );

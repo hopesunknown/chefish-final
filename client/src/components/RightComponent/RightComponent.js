@@ -20,7 +20,7 @@ export default function RightComponent({ userTopics }) {
       body: JSON.stringify(body),
     };
 
-    fetch("http://localhost:3000/usertopic/delete", configObj);
+    fetch("/usertopic/delete", configObj);
     this.setState({
         state: this.state,
       });
