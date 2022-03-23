@@ -13,9 +13,9 @@ export default function LeftComponentProfile({ userMeetups, userInfo, setUser, u
   // console.log(meetups)
   console.log(userMeetups);
 
-  function leaveMeetup(meetup) {
+  function leaveMeetup(m) {
     alert("Meetup removed!")
-    const body = { user_id: userInfo.id, meetup_id: meetup.id };
+    const body = { meetup_id: m.id, user_id: userInfo.id };
 
     const configObj = {
       method: "DELETE",

@@ -74,9 +74,10 @@ class UsersController < ApplicationController
         # meetups = Meetup.find(params[:user][:meetup_ids])
 
         # UserMeetup.create(user_id: params[:user_id], meetup_id: params[:meetup_id])
-
-        um = UserMeetup.find(params[:id])
-        # um = UserMeetup.find(params[:user_id, :meetup_id])
+        
+        # um = UserMeetup.find(params[:id])
+        
+        um = UserMeetup.find_by(user_id: params[:user_id], meetup_id: params[:meetup_id])
         um.destroy
         head :no_content
     end
@@ -95,6 +96,10 @@ class UsersController < ApplicationController
     end
 
     private 
+
+    # def user_meetup_params
+    #     params.permit(:user_id, :meetup_id)
+    # end
 
     def user_params
         params.require(:user).permit(:topic_ids, :meetup_ids, :comment_ids, :first_name, :email, :password, :topicArray)
