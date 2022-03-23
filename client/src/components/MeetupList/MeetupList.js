@@ -25,8 +25,6 @@ export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
                   key={meetup.id}
                   meetup={meetup}
                   joinMeetup={joinMeetup}
-                  user={user}
-                  setUser={setUser}
                 />
               );
             })}

@@ -39,19 +39,20 @@ export default function MainPage({ user, setUser, meetups, setMeetups }) {
       setClickedMeetup(meetup)
   };
 
-  // const filteredMeetups = meetups.filter((meeting) =>
-  //     meeting.topic.topic_name.includes(
-  //       searchWord ||
-  //         searchWord.charAt(0).toUpperCase() +
-  //           searchWord.slice(1)
-  //     )
-  //   );
+  const filteredMeetups = meetups.filter((meeting) =>
+      meeting.topic["topic_name"].includes(
+        searchWord ||
+          searchWord.charAt(0).toUpperCase() +
+            searchWord.slice(1)
+      )
+    );
 
     return (
       <div>
         THIS THE MAIN PAGE
         <NavBar
           searchWord={searchWord}
+          // setSearchWord={setSearchWord}
           handleChange={handleChange}
           user={user}
           setUser={setUser}
@@ -61,7 +62,7 @@ export default function MainPage({ user, setUser, meetups, setMeetups }) {
         <AllThree
           meetups={meetups}
           setMeetups={setMeetups}
-          // filteredMeetups={filteredMeetups}
+          filteredMeetups={filteredMeetups}
           user={user}
           setUser={setUser}
           comments={comments}

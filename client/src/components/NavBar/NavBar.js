@@ -14,6 +14,7 @@ export default function NavBar({ searchWord, handleChange, userInfo, user, setUs
         <div className="SearchBar">
           <SearchBar
             searchWord={searchWord}
+            // setSearchWord={setSearchWord}
             handleChange={handleChange}
             meetups={meetups}
             setMeetups={setMeetups}

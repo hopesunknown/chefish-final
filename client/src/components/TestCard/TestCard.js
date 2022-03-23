@@ -22,7 +22,8 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
         <FrontSide
           style={{
             backgroundColor: "transparent",
-            borderRadius: "10px"
+            borderRadius: "10px",
+
           }}
         >
           <img
@@ -40,7 +41,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
             // backgroundColor: "#000000",
             color: "#FFFFFF",
             textAlign: "center",
-            borderRadius: "15px"
+            borderRadius: "15px",
           }}
         >
           <h1>{meetup.title}</h1>
