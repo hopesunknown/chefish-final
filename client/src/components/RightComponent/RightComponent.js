@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function RightComponent({ userTopics }) {
+export default function RightComponent({ userTopics, userDetails, meetups, setMeetups, userInfo, setUser }) {
 
   const [topic, setTopic] = useState("");
 
