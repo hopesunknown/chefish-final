@@ -9,29 +9,26 @@ export default function RightComponent({ userTopics, userDetails, meetups, setMe
   function deleteTopic(t) {
     alert("Topic Deleted!");
 
-    const body = { topic_id: t.id, user_id: window.userId };
+    const body = { topic_id: t.id, user_id: userInfo.id };
 
     const configObj = {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
       body: JSON.stringify(body),
     };
 
     fetch("/usertopic/delete", configObj);
-    this.setState({
-        state: this.state,
-      });
-      setTimeout(() => {
-        this.props.rerender();
-      }, 1000);
-  };
+      };
+      // setTimeout(() => {
+      //   rerender();
+      // }, 1000);
+  // };
 
     return (
       <div className="RightComponent">
-        <h1>Your Interests</h1>
+        <h1>Your Cuisine Interests</h1>
         {userTopics &&
           userTopics.map((t) => {
             return (
