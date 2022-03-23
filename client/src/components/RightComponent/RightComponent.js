@@ -1,5 +1,3 @@
-// double check this code
-
 import React, { useState } from "react";
 
 export default function RightComponent({ userTopics, userDetails, meetups, setMeetups, userInfo, setUser }) {
