@@ -83,8 +83,8 @@ class UsersController < ApplicationController
     end
 
     def deleteTopic
-        # topic = UserTopic.find_by(user_id: params[:user_id], topic_id: params[:topic_id])
-        topic = UserTopic.find(params[:user_id, :topic_id])
+        topic = UserTopic.find_by(user_id: params[:user_id], topic_id: params[:topic_id])
+        # topic = UserTopic.find(params[:user_id, :topic_id])
         topic.destroy
         head :no_content
     end
