@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -44,11 +43,25 @@ function App() {
         {/* <MainPage /> */}
         
         <Routes>
-          <Route exact path="/signin" element={<Signin user={user} setUser={setUser} />} />
-          <Route exact path="/profile" element={<Profile user={user} setUser={setUser} meetups={meetups} setMeetups={setMeetups} />} />
-          <Route exact path="/main" element={<MainPage user={user} setUser={setUser} meetups={meetups} setMeetups={setMeetups} />} />
-          <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
-          <Route exact path="/" element={<Signin user={user} setUser={setUser} />} />    
+          <Route exact path="/signin" element={<Signin 
+          user={user} 
+          setUser={setUser} />} />
+          <Route exact path="/profile" element={<Profile 
+          user={user} 
+          setUser={setUser} 
+          meetups={meetups} 
+          setMeetups={setMeetups} />} />
+          <Route exact path="/main" element={<MainPage 
+          user={user} 
+          setUser={setUser} 
+          meetups={meetups} 
+          setMeetups={setMeetups} />} />
+          <Route exact path="/signup" element={<Signup 
+          user={user} 
+          setUser={setUser} />} />
+          <Route exact path="/" element={<Signin 
+          user={user} 
+          setUser={setUser} />} />    
         </Routes>
       </div>
     </>
