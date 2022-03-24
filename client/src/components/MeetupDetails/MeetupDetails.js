@@ -74,7 +74,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             <br />
             <br />
             <form onSubmit={handleSubmit}>
-              <label> Add a comment about this meetup:</label>
+              <label> Did you attend this event?<br/>Leave a comment about your experiences:</label>
               <br />
               <input
                 type="textarea"
