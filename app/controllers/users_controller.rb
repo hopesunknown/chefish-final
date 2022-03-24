@@ -35,6 +35,7 @@ class UsersController < ApplicationController
     
     def create
         user = User.new(user_params)
+        byebug
         user.save
         params["topicArray"].each do  |topic| 
         UserTopic.create(user_id: user.id, topic_id: topic["id"])
