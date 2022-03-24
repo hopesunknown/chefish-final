@@ -107,6 +107,9 @@ export default function Signup({ user, setUser }) {
             </form>
           </div>
         </div>
+
+
+        <h1>stuff</h1>
         <div className="Checkboxes">
           <Checkboxes handleTopicClick={handleTopicClick} />
         </div>
