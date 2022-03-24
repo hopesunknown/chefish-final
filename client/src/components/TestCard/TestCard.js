@@ -17,7 +17,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
       ref={ref} // to use toggle method like ref.curret.toggle()
       // if you pass isFlipped prop component will be controlled component.
       // and other props, which will go to div
-      style={{ width: '200px', height: '200px' }} /// these are optional style, it is not necessary
+      style={{ width: '180px', height: '180px' }} /// these are optional style, it is not necessary
     >
         <FrontSide
           style={{
@@ -29,8 +29,8 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
           <img
             src={meetup.image}
             alt="More Info"
-            width="180"
-            height="180"
+            width="150"
+            height="150"
           />
           {/* <button onClick={() => { ref.current.toggle(); }}></button> */}
         </FrontSide>
