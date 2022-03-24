@@ -16,10 +16,10 @@ export default function CenterComponentProfile({ userDetails, handleClick, user,
             <br/>  <br/>
             <p>Thanks for using Chefish!</p>
             <p>
-              Here are the classes you have joined and the cuisines you've chosen.
+              Here are the classes you have joined and the cuisines you are interested in.
             </p>
             <br />
-            <p>Stay tuned for more app features in the near future</p>
+            <p>Stay tuned for more app features in the near future!</p>
           </div>
         </div>
       </div>
