@@ -118,10 +118,13 @@
 }
 
 .Logo {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 60px;
+  color: black;
   left:0;
   float: left;
   margin-right: 120px;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-left: 20px;
 }
 .Logo:hover {

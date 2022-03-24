@@ -9,7 +9,7 @@ export default function NavBar({ searchWord, handleChange, userInfo, user, setUs
     <>
       <div className="NavBar">
         <div className="Logo">
-        {/* <img src="/logo6.png" alt="logo" width="300" /> */}
+       <p>chefish</p>
         </div>
         <div className="SearchBar">
           <SearchBar
