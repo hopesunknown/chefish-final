@@ -9,7 +9,7 @@ export default function CenterComponentProfile({ userDetails, handleClick, user,
             <h1>Welcome back {userDetails.first_name}!</h1>
             <h2>Email: {userDetails.email}</h2>
 
-            <p>Have a cooking class in mind? Create one:</p>
+            <p>Looking to host your cooking class in your area? Create one:</p>
             <button className="SignInBtn" onClick={handleClick}>
               Create a New Cooking Class
             </button>
