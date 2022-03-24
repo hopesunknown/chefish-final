@@ -13,9 +13,9 @@ export default function Signup({ user, setUser }) {
   const [loggedIn, setLoggedIn] = useState(false);
   const [topicArray, setTopicArray] = useState([]);
 
-  function handleNameChange(event) {
-    setFirstName(event.target.value);
-  };
+  // function handleNameChange(event) {
+  //   setFirstName(event.target.value);
+  // };
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
@@ -82,7 +82,7 @@ export default function Signup({ user, setUser }) {
               className="SignUpInput"
                 type="text"
                 value={firstName}
-                onChange={handleNameChange}
+                onChange={(event) => setFirstName(event.target.value)}
               />
               <br />
               <label>Email:</label>
@@ -90,7 +90,7 @@ export default function Signup({ user, setUser }) {
                className="SignUpInput"
                 type="text"
                 value={email}
-                onChange={handleEmailChange}
+                onChange={(event) => setEmail(event.target.value)}
               />
               <br />
               <label>Password:</label>
@@ -98,7 +98,7 @@ export default function Signup({ user, setUser }) {
                className="SignUpInput"
                 type="text"
                 value={password}
-                onChange={handlePasswordChange}
+                onChange={(event) => setPassword(event.target.value)}
               />
               <br />
               <br />
