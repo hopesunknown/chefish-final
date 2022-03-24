@@ -49,7 +49,6 @@ export default function MainPage({ user, setUser, meetups, setMeetups }) {
 
     return (
       <div>
-        THIS THE MAIN PAGE
         <NavBar
           searchWord={searchWord}
           // setSearchWord={setSearchWord}

@@ -41,6 +41,7 @@ body {
   }
 }
 
+
 .NavBar {
   color: black;
   background-color: white;
@@ -51,6 +52,9 @@ body {
   height: 90px;
   z-index: 9999;
 
+}
+.navlinks {
+  text-decoration: none;
 }
 
 .RightLinks {
