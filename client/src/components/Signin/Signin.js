@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 // import SearchContainer from "../SearchContainer/SearchContainer";
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
@@ -52,7 +52,6 @@ export default function Signin({ user, setUser, handleLogin }) {
         />
     ) : (
       <div>
-        THIS IS THE SIGNIN PAGE
         <div className="NavBar">
           <ProfileNavBar />
           {/* <SearchContainer /> */}
@@ -61,7 +60,8 @@ export default function Signin({ user, setUser, handleLogin }) {
           </div>
         </div>
         <div className="Signin">
-          <h1>Log in:</h1>
+          <h1>Login to your account</h1>
+          <h4>Enter your info to access cooking groups near you.</h4>
 
           <form onSubmit={handleSubmit}>
             <label>First Name:</label>
@@ -92,6 +92,8 @@ export default function Signin({ user, setUser, handleLogin }) {
             <input type="submit" className="SignInBtn" />
           </form>
         </div>
+
+        Don't have an account? <Link to="/Signup">Create Account</Link>
         <Footer />
       </div>
     )
