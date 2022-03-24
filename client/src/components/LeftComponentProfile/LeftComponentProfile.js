@@ -15,20 +15,24 @@ export default function LeftComponentProfile({ userMeetups, userInfo, setUser, u
 
   function leaveMeetup(m) {
     alert("Meetup removed!")
-    const body = { meetup_id: m.id, user_id: userInfo.id };
+    // const body = { meetup_id: m.id, user_id: userInfo.id };
 
-    const configObj = {
+    fetch("/usermeetup/delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(body),
-    };
+      body: JSON.stringify({ 
+        meetup_id: m.id, 
+        user_id: userInfo.id 
+      }),
+    })
+  };
 
     setUserMeetup(userMeetup);
 
-    fetch("/usermeetup/delete", configObj);
-  };
+  //   fetch("/usermeetup/delete", configObj);
+  // };
 
     return (
       <div className="LeftComponent">
