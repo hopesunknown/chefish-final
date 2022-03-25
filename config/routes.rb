@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     post '/signup', to: 'users#create'
     post '/users/login', to: 'users#login'
     post '/join', to: 'users#joinMeetup'
+
+    delete "/logout", to: "sessions#logout"
   
     delete '/usertopic/delete', to: 'users#deleteTopic'
     delete '/usermeetup/delete', to: 'users#leaveMeetup'

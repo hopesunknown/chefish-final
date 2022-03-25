@@ -2,8 +2,10 @@ class UsersController < ApplicationController
     skip_before_action :authorize, only: [:new, :save, :create, :login]
     
     def index
-        users = User.all
-        render json: users.to_json(
+        # users = User.all
+        # render json: users.to_json(
+        #     :include => [:topics, {:meetups => {:include => :topic}}, :comments])
+        render json: current_user.to_json(
             :include => [:topics, {:meetups => {:include => :topic}}, :comments])
     end
 
@@ -18,19 +20,22 @@ class UsersController < ApplicationController
         end 
     end
 
-    def loggedInUser 
-        user = User.find(session[:id])
-        render json: user
-    end
+    # def loggedInUser 
+    #     user = User.find(session[:id])
+    #     render json: user
+    # end
 
     # def logout 
     #     session[:id] = nil
     # end
 
     def show
-        user = User.find(params[:id])
-        render json: user.to_json(
-            :include => [:topics, {:meetups => {:include => :topic}}, :comments])
+        # user = User.find(params[:id])
+        # render json: user.to_json(
+        #     :include => [:topics, {:meetups => {:include => :topic}}, :comments])
+
+            render json: current_user.to_json(
+                :include => [:topics, {:meetups => {:include => :topic}}, :comments])
     end
     
     def create
