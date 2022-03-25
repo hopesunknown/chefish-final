@@ -4,7 +4,4 @@ class UserMeetupsController < ApplicationController
         render json: UserMeetup.all
     end
 
-    def destroy
-        
-    end
 end

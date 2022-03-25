@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
-    
+    skip_before_action :authorize, only: (:create, :update)
+
     def index
         topics = Topic.all 
         render json: topics.to_json(:include => [:meetups, :users])
