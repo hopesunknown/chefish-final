@@ -46,12 +46,7 @@ function App() {
 }
 
   if (!user) return (
-    <>
-    <Container>
-      <Alert className="mt-3" variant="primary" >Please Login OR Signup To Create A New Account</Alert>
-    </Container>
     <Signin setUser={setUser}/>
-    </>
   )
 
   return (
@@ -83,7 +78,7 @@ function App() {
           user={user} 
           setUser={setUser} />} />    
         </Routes>
-        
+
       </div>
     </>
   );

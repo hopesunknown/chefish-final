@@ -10,36 +10,51 @@ export default function Signin({ user, setUser, handleLogin }) {
     const [firstName, setFirstName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [errors, setErrors] = useState([]);
     const [loggedIn, setLoggedIn] = useState(false);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    // setLoggedIn(true);
+  // function handleSubmit(event) {
+  //   event.preventDefault();
 
-    fetch("/users/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ 
-        first_name: firstName, 
-        email: email, 
-        password: password
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.id === undefined || data.id === 0) {
-          console.log("Not logged in");
+  //   fetch("/users/login", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ 
+  //       first_name: firstName, 
+  //       email: email, 
+  //       password: password
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (data.id === undefined || data.id === 0) {
+  //         console.log("Not logged in");
+  //       } else {
+  //         console.log("logged in");
+  //         setLoggedIn(true);
+  //         setUser(data)
+  //       }
+  //     });
+  // };
+
+  function handleSubmit(e){
+    e.preventDefault();
+    setLoggedIn(true);
+    fetch("/login", {
+        method: 'POST',
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify({ first_name: firstName, email: email, password: password })
+    }).then ((r) => {
+        setLoggedIn(false);
+        if (r.ok){
+            r.json().then((user) => setUser(user));
         } else {
-          console.log("logged in");
-          setLoggedIn(true);
-          setUser(data)
-          // window.userId = user.id;
-          // handleLogin(user)
+            r.json().then((err) => setErrors(err.errors));
         }
-      });
-  };
+    });
+}
 
   return (
   
@@ -89,7 +104,8 @@ export default function Signin({ user, setUser, handleLogin }) {
             />
             <br />
             <br />
-            <input type="submit" className="SignInBtn" />
+            <input type="submit" className="SignInBtn"/>
+              {/* {loggedIn ? "Loading..." : "Login"}</input> */}
           </form>
         </div>
 

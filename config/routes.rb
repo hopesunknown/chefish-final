@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   
     get "/me", to: "users#show"
     post '/signup', to: 'users#create'
-    post '/users/login', to: 'users#login'
+    # post '/users/login', to: 'users#login'
+    post "/login", to: "sessions#login"
     post '/join', to: 'users#joinMeetup'
 
     delete "/logout", to: "sessions#logout"
