@@ -14,14 +14,14 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
   console.log(userInfo);
   console.log(meetups);
 
-    const user = {
-      id: userInfo.id,
-      first_name: userInfo.first_name,
-      email: userInfo.email,
-      password: userInfo.password,
-      meetups: userInfo.meetups,
-      topics: userInfo.topics
-    };
+    // const user = {
+    //   id: userInfo.id,
+    //   first_name: userInfo.first_name,
+    //   email: userInfo.email,
+    //   password: userInfo.password,
+    //   meetups: userInfo.meetups,
+    //   topics: userInfo.topics
+    // };
     
 
     return (
@@ -29,8 +29,8 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
         <LeftComponentProfile
         userInfo={userInfo}
         setUser={setUser}
-          userMeetups={user.meetups}
-          userDetails={user}
+          // userMeetups={userInfo.meetups}
+          // userDetails={user}
           meetups={meetups}
           setMeetups={setMeetups}
         />
@@ -38,7 +38,7 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
           <NewMeetupForm user={userInfo} setUser={setUser}/>
         ) : (
           <CenterComponentProfile
-            userDetails={user}
+            // userDetails={user}
             handleClick={handleClick}
             user={userInfo}
             setUser={setUser}
@@ -46,8 +46,8 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
         )}
 
         <RightComponent
-          userTopics={userInfo.topics}
-          userDetails={user}
+          // userTopics={userInfo.topics}
+          // userDetails={user}
           meetups={meetups}
           setMeetups={setMeetups}
           userInfo={userInfo}

@@ -6,12 +6,12 @@ import AllThreeProfile from "../AllThreeProfile/AllThreeProfile";
 
 export default function Profile({ user, setUser, meetups, setMeetups }) {
 
-  useEffect(() => {
-    console.log(user)
-        fetch(`/users/${user.id}`)
-          .then((response) => response.json())
-          .then((user) => setUser(user));
-  }, []);
+  // useEffect(() => {
+  //   console.log(user)
+  //       fetch(`/users/${user.id}`)
+  //         .then((response) => response.json())
+  //         .then((user) => setUser(user));
+  // }, []);
 
   // function rerender(){
   //       fetch(`/users/${window.userId}`)
@@ -21,7 +21,6 @@ export default function Profile({ user, setUser, meetups, setMeetups }) {
         
     return (
             <div>
-                THIS IS THE PROFILE PAGE
                 
                 <NavBar
                   userInfo={user}

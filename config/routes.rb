@@ -5,13 +5,14 @@ Rails.application.routes.draw do
   resources :meetups
   resources :users
   resources :user_meetups
+  resources :user_topics
   
     get "/me", to: "users#show"
     post '/signup', to: 'users#create'
     post '/users/login', to: 'users#login'
     post '/join', to: 'users#joinMeetup'
   
-    delete 'usertopic/delete', to: 'users#deleteTopic'
+    delete '/usertopic/delete', to: 'users#deleteTopic'
     delete '/usermeetup/delete', to: 'users#leaveMeetup'
     get '/loggedInUser', to: 'users#loggedInUser'
 

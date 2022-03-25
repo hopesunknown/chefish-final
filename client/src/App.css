@@ -71,6 +71,7 @@ body {
   margin-right: 120px;
   margin-top: 0px;
   margin-left: 20px;
+  text-decoration: none;
 }
 .Logo:hover {
 -webkit-transform: scale(1.1);
