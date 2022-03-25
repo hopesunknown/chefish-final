@@ -69,10 +69,6 @@ export default function Signin({ user, setUser, handleLogin }) {
       <div>
         <div className="NavBar">
           <ProfileNavBar />
-          {/* <SearchContainer /> */}
-          <div className="Logo">
-            {/* <img src="/logo1.png" alt="logo" width="100" /> */}
-          </div>
         </div>
         <div className="Signin">
           <h1>Login to your account</h1>
