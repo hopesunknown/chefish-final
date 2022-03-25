@@ -10,6 +10,7 @@ export default function Signup({ user, setUser }) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
   const [topicArray, setTopicArray] = useState([]);
 
@@ -27,7 +28,8 @@ export default function Signup({ user, setUser }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    setErrors([]);
+    setLoggedIn(true);
     fetch("/signup", {
       method: "POST",
       headers: {
@@ -37,18 +39,27 @@ export default function Signup({ user, setUser }) {
         first_name: firstName,
         email: email,
         password: password
-      }),
-    })
-      .then((resp) => resp.json())
-      .then((user) => {
-        if (user.id === undefined || user.id === 0) {
-          console.log("Not logged in");
-        } else {
-          setLoggedIn(true);
-          window.userId = user.id;
-        }
-      });
-  };
+      })
+  //   })
+  //     .then((resp) => resp.json())
+  //     .then((user) => {
+  //       if (user.id === undefined || user.id === 0) {
+  //         console.log("Not logged in");
+  //       } else {
+  //         setLoggedIn(true);
+  //         window.userId = user.id;
+  //       }
+  //     });
+  // };
+}).then((r) => {
+  setLoggedIn(false);
+  if (r.ok) {
+      r.json().then((user) => setUser(user));
+  } else {
+      r.json().then((err) => setErrors(err.errors));
+  }
+})
+}
 
   function handleTopicClick(topic) {
     setTopicArray([...topicArray, topic])
@@ -57,6 +68,8 @@ export default function Signup({ user, setUser }) {
     return (
       loggedIn ? (
         <Navigate to="/main" 
+        user={user}
+        setUser={setUser}
         firstName={firstName} 
         email={email} 
         password={password} 

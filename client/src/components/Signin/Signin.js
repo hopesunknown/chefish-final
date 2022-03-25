@@ -60,6 +60,8 @@ export default function Signin({ user, setUser, handleLogin }) {
   
     loggedIn ? (
       <Navigate to="/main" 
+        user={user}
+        setUser={setUser}
         firstName={firstName} 
         email={email} 
         password={password} 

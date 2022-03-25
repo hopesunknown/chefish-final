@@ -1,4 +1,5 @@
 class MeetupsController < ApplicationController
+    skip_before_action :authorize
     
     def index 
         meetups = Meetup.all 

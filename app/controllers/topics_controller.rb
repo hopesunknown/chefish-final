@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-    skip_before_action :authorize, only: (:create, :update)
+    skip_before_action :authorize
 
     def index
         topics = Topic.all 
