@@ -3,21 +3,21 @@ Rails.application.routes.draw do
   resources :comments
   resources :topics
   resources :meetups
-  resources :users
+  # resources :users
   resources :user_meetups
   resources :user_topics
   
     get "/me", to: "users#show"
-    post '/signup', to: 'users#create'
+    post "/signup", to: "users#create"
     # post '/users/login', to: 'users#login'
     post "/login", to: "sessions#login"
-    post '/join', to: 'users#joinMeetup'
-
     delete "/logout", to: "sessions#logout"
-  
-    delete '/usertopic/delete', to: 'users#deleteTopic'
-    delete '/usermeetup/delete', to: 'users#leaveMeetup'
-    get '/loggedInUser', to: 'users#loggedInUser'
+
+
+    post "/join", to: "users#joinMeetup"
+    delete "/usertopic/delete", to: "users#deleteTopic"
+    delete "/usermeetup/delete", to: "users#leaveMeetup"
+    # get '/loggedInUser', to: 'users#loggedInUser'
 
   # # get "/me", to: "users#show"
   # get '/loggedInUser', to: 'users#loggedInUser'
