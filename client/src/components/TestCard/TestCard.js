@@ -17,7 +17,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
       ref={ref} // to use toggle method like ref.curret.toggle()
       // if you pass isFlipped prop component will be controlled component.
       // and other props, which will go to div
-      style={{ width: '180px', height: '180px' }} /// these are optional style, it is not necessary
+      style={{ width: '175px', height: '160px' }} /// these are optional style, it is not necessary
     >
         <FrontSide
           style={{
@@ -29,25 +29,25 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
           <img
             src={meetup.image}
             alt="More Info"
-            width="150"
-            height="150"
+            width="140"
+            height="130"
           />
           {/* <button onClick={() => { ref.current.toggle(); }}></button> */}
         </FrontSide>
         
         <BackSide
           style={{
-            backgroundColor: "pink",
-            // backgroundColor: "#000000",
+            backgroundColor: "black",
             color: "#FFFFFF",
+            fontSize: "10px",
             textAlign: "center",
             borderRadius: "15px",
           }}
         >
           <h1>{meetup.title}</h1>
-          <p>Location: {meetup.location}</p>
-          <p>Date: {meetup.date}</p>
-          <h5>Topic: {meetup.topic["topic_name"]}</h5>
+          <h3>{meetup.location}</h3>
+          <h3>{meetup.date}</h3>
+          <h3>{meetup.topic["topic_name"]}</h3>
         </BackSide>
       </Flippy>
       </div>

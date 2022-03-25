@@ -12,12 +12,6 @@ function App() {
 
   const navigate = useNavigate()
 
-  // useEffect(() => {
-  //   fetch("/me")
-  //     .then((response) => response.json())
-  //     .then((user) => setUser(user));
-  // }, []);
-
   useEffect(() => {
     fetch("/meetups")
       .then((response) => response.json())
@@ -68,7 +62,8 @@ function App() {
           user={user} 
           setUser={setUser} 
           meetups={meetups} 
-          setMeetups={setMeetups} />} />
+          setMeetups={setMeetups}
+          handleLogOutClick={handleLogOutClick} />} />
 
           <Route exact path="/signup" element={<Signup 
           user={user} 

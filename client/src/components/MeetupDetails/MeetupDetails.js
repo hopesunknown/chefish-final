@@ -80,6 +80,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
                 type="textarea"
                 value={content}
                 onChange={handleCommentChange}
+                className="comment-box"
               ></input>
               <br />
               <input type="submit"></input>
