@@ -6,7 +6,7 @@ export default function LeftComponentProfile({ userMeetups, user, setUser, userD
   const [refreshed, setRefreshed] = useState(false);
 
   function componentMount() {
-    setUserMeetup(userMeetups);
+    setUserMeetup(meetups);
   }
 
   console.log(user.first_name);
@@ -33,13 +33,15 @@ export default function LeftComponentProfile({ userMeetups, user, setUser, userD
     return (
       <div className="LeftComponent">
         <h1>Your Meetups</h1>
-        {userMeetups &&
-          userMeetups.map((m) => {
+        {user.meetups &&
+          user.meetups.map((m) => {
             return (
               <MeetupCard
                 key={m.id}
                 meetup={m}
                 leaveMeetup={leaveMeetup}
+                user={user}
+                setUser={setUser}
               />
             );
           })}
