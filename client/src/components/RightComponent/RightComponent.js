@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 
-export default function RightComponent({ userTopics, userDetails, meetups, setMeetups, userInfo, setUser }) {
+export default function RightComponent({ userTopics, userDetails, meetups, setMeetups, user, setUser }) {
 
   const [topic, setTopic] = useState("");
+
+console.log(user.topics)
 
   function deleteTopic(t) {
     alert("Topic Deleted!");
 
-    const body = { topic_id: t.id, user_id: userInfo.id };
+    const body = { topic_id: t.id, user_id: user.id };
 
     const configObj = {
       method: "DELETE",
@@ -27,17 +29,16 @@ export default function RightComponent({ userTopics, userDetails, meetups, setMe
     return (
       <div className="RightComponent">
         <h1>Your Cuisine Interests</h1>
-        {userTopics &&
-          userTopics.map((t) => {
+        {user.topics &&
+          user.topics.map((t) => {
             return (
-               
               <p>
                 {t.topic_name}{" "}
                 <button
                   onClick={() => deleteTopic(t)}
                   className="DeleteBtn"
                 >
-                  x
+                  X
                 </button>
               </p>
             );
