@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import MeetupCard from "../MeetupCard/MeetupCard";
 
-export default function LeftComponentProfile({ userMeetups, userInfo, setUser, userDetails, meetups, setMeetups }) {
+export default function LeftComponentProfile({ userMeetups, user, setUser, userDetails, meetups, setMeetups }) {
   const [userMeetup, setUserMeetup] = useState([]);
   const [refreshed, setRefreshed] = useState(false);
 
@@ -9,9 +9,9 @@ export default function LeftComponentProfile({ userMeetups, userInfo, setUser, u
     setUserMeetup(userMeetups);
   }
 
-  console.log(userInfo);
+  console.log(user.first_name);
   // console.log(meetups)
-  console.log(userMeetups);
+  console.log(user.meetups);
 
   function leaveMeetup(m) {
     alert("Meetup removed!")
@@ -22,7 +22,7 @@ export default function LeftComponentProfile({ userMeetups, userInfo, setUser, u
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ meetup_id: m.id, user_id: userInfo.id }),
+      body: JSON.stringify({ meetup_id: m.id, user_id: user.id }),
     };
 
     setUserMeetup(userMeetup);

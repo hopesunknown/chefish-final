@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function CenterComponentProfile({ userDetails, handleClick, user, setUser }) {
+export default function CenterComponentProfile({ handleClick, user, setUser, meetups, setMeetups }) {
 
     return (
       <div className="CenterComponentProfile">
         <div className="SpacingDiv">
           <div className="UserProfile">
-            <h1>Welcome back {userDetails.first_name}!</h1>
-            <h2>Email: {userDetails.email}</h2>
+            <h1>Welcome back {user.first_name}!</h1>
+            <h2>Email: {user.email}</h2>
 
             <p>Looking to host your cooking class in your area? Create one:</p>
             <button className="SignInBtn" onClick={handleClick}>
@@ -18,8 +18,6 @@ export default function CenterComponentProfile({ userDetails, handleClick, user,
             <p>
               Here are the classes you have joined and the cuisines you are interested in.
             </p>
-            <br />
-            <p>Stay tuned for more app features in the near future!</p>
           </div>
         </div>
       </div>

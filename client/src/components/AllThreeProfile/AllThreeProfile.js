@@ -4,14 +4,14 @@ import RightComponent from "../RightComponent/RightComponent";
 import CenterComponentProfile from "../CenterComponentProfile/CenterComponentProfile";
 import NewMeetupForm from "../NewMeetupForm/NewMeetupForm";
 
-export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups }) {
+export default function AllThreeProfile({ user, setUser, meetups, setMeetups }) {
   const [clicked, setClicked] = useState(false);
 
   function handleClick() {
     setClicked(!clicked);
   };
 
-  console.log(userInfo);
+  console.log(user);
   console.log(meetups);
 
     // const user = {
@@ -27,7 +27,7 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
     return (
       <div className="AllThree">
         <LeftComponentProfile
-        userInfo={userInfo}
+        user={user}
         setUser={setUser}
           // userMeetups={userInfo.meetups}
           // userDetails={user}
@@ -35,13 +35,15 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
           setMeetups={setMeetups}
         />
         {clicked ? (
-          <NewMeetupForm user={userInfo} setUser={setUser}/>
+          <NewMeetupForm user={user} setUser={setUser} meetups={meetups} setMeetups={setMeetups}/>
         ) : (
           <CenterComponentProfile
             // userDetails={user}
             handleClick={handleClick}
-            user={userInfo}
+            user={user}
             setUser={setUser}
+            meetups={meetups}
+            setMeetups={setMeetups}
           />
         )}
 
@@ -50,7 +52,7 @@ export default function AllThreeProfile({ userInfo, setUser, meetups, setMeetups
           // userDetails={user}
           meetups={meetups}
           setMeetups={setMeetups}
-          userInfo={userInfo}
+          user={user}
           setUser={setUser}
         />
       </div>

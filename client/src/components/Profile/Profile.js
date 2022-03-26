@@ -15,19 +15,19 @@ export default function Profile({ user, setUser, meetups, setMeetups }) {
     return (
             <div>
                 <NavBar
-                  userInfo={user}
+                  user={user}
                   setUser={setUser}
                   meetups={meetups}
                   setMeetups={setMeetups}
                 />
                 <AllThreeProfile
-                  userInfo={user}
+                  user={user}
                   setUser={setUser}
                   meetups={meetups}
                   setMeetups={setMeetups}
                 />
                 <Footer
-                  userInfo={user}
+                  user={user}
                   setUser={setUser}
                   meetups={meetups}
                   setMeetups={setMeetups}
