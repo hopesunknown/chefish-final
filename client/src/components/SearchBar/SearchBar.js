@@ -7,7 +7,7 @@ export default function SearchBar({ searchWord, handleChange, meetups, setMeetup
         <form>
           <label>
           <span className="iconify" data-icon="et-magnifying-glass" data-inline="false"></span>
-          Search cooking classes:
+          Search cooking classes:&nbsp;&nbsp;&nbsp;
             <input  
               className="Search"
               type="text"
