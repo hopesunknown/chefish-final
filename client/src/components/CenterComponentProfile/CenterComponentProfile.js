@@ -6,7 +6,7 @@ export default function CenterComponentProfile({ handleClick, user, setUser, mee
       <div className="CenterComponentProfile">
         <div className="SpacingDiv">
           <div className="UserProfile">
-            <h1>Welcome back {user.first_name}!</h1>
+            <h1>Welcome back {user.first_name}</h1>
             <h3>Email: {user.email}</h3>
             <p>
               Here are the meetups you have joined and the cuisines you are interested in.

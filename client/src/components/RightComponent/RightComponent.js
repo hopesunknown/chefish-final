@@ -29,6 +29,7 @@ console.log(user.topics)
     return (
       <div className="RightComponent">
         <h2>Cuisine Interests</h2>
+        <div className="cuisine-card">
         {user.topics &&
           user.topics.map((t) => {
             return (
@@ -50,6 +51,7 @@ console.log(user.topics)
               </>
             );
           })}
+          </div>
       </div>
     );
   }
