@@ -5,9 +5,9 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 // import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 // import rootReducer from "./reducers/reducer";
-import store from "./store/store";
+// import store from "./store/store";
 
 ReactDOM.render(
   <Router>

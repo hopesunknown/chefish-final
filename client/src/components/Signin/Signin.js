@@ -4,34 +4,11 @@ import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import SignInForm from '../SignInForm/SignInForm';
 import Signup from '../Signup/Signup';
+import Button from '../Styles/Button';
 
 
 export default function Signin({ onLogin }) {
-
     const [showLogin, setShowLogin] = useState(true);
-
-//     const [firstName, setFirstName] = useState("");
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [errors, setErrors] = useState([]);
-//     const [loggedIn, setLoggedIn] = useState(false);
-
-//   function handleSubmit(e){
-//     e.preventDefault();
-//     setLoggedIn(true);
-//     fetch("/login", {
-//         method: 'POST',
-//         headers: { "Content-Type": "application/json"},
-//         body: JSON.stringify({ email: email, password: password })
-//     }).then ((r) => {
-//         setLoggedIn(false);
-//         if (r.ok){
-//             r.json().then((user) => setUser(user));
-//         } else {
-//             r.json().then((err) => setErrors(err.errors));
-//         }
-//     });
-// }
 
   return (
   
@@ -45,28 +22,28 @@ export default function Signin({ onLogin }) {
       //   loggedIn={loggedIn} 
       //   />
       <>
-      <ProfileNavBar />
-      <SignInForm onLogin={onLogin} />
-      <hr className="hr" />
-      <p className="accountquestion">
-        Don't have an account?</p> &nbsp;
-        <button onClick={() => setShowLogin(false)}>
-          Sign Up
-        </button> 
+        <ProfileNavBar />
+        <SignInForm onLogin={onLogin} />
+        <hr className="hr" />
+        <p className="accountquestion">
+          Don't have an account?</p>
+        <Button onClick={() => setShowLogin(false)}>
+          Signup
+        </Button> 
     </>
     ) : (
       <>
-      <ProfileNavBar />
-      <Signup onLogin={onLogin} />
-          <hr className="hr" />
-          <p className="accountquestion">
-            Already have an account?</p> &nbsp;
-            <button onClick={() => setShowLogin(true)}>
-              Log In
-            </button>
+        <ProfileNavBar />
+        <Signup onLogin={onLogin} />
+        <hr className="hr" />
+        <p className="accountquestion">
+          Already have an account?
+        </p>
+        <Button onClick={() => setShowLogin(true)}>
+         Login
+        </Button>
       </>
      
     )
-  
   )
 }
