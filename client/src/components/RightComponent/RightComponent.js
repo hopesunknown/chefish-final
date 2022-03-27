@@ -32,8 +32,14 @@ console.log(user.topics)
         {user.topics &&
           user.topics.map((t) => {
             return (
+              <>
               <p>
-                {t.topic_name}{" "}
+                {t.topic_name}
+                </p>
+                <p>
+                {t.description}
+                </p>
+                <p>
                 <button
                   onClick={() => deleteTopic(t)}
                   className="DeleteBtn"
@@ -41,6 +47,7 @@ console.log(user.topics)
                   X
                 </button>
               </p>
+              </>
             );
           })}
       </div>
