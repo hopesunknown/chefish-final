@@ -28,7 +28,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
         >
           <img
             src={meetup.image}
-            alt="meetup image"
+            alt="meetup"
             width="140"
             height="130"
           />
