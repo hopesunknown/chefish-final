@@ -13,39 +13,13 @@ export default function Signin({ user, setUser, handleLogin }) {
     const [errors, setErrors] = useState([]);
     const [loggedIn, setLoggedIn] = useState(false);
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-
-  //   fetch("/users/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ 
-  //       first_name: firstName, 
-  //       email: email, 
-  //       password: password
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       if (data.id === undefined || data.id === 0) {
-  //         console.log("Not logged in");
-  //       } else {
-  //         console.log("logged in");
-  //         setLoggedIn(true);
-  //         setUser(data)
-  //       }
-  //     });
-  // };
-
   function handleSubmit(e){
     e.preventDefault();
     setLoggedIn(true);
     fetch("/login", {
         method: 'POST',
         headers: { "Content-Type": "application/json"},
-        body: JSON.stringify({ first_name: firstName, email: email, password: password })
+        body: JSON.stringify({ email: email, password: password })
     }).then ((r) => {
         setLoggedIn(false);
         if (r.ok){
@@ -83,14 +57,14 @@ export default function Signin({ user, setUser, handleLogin }) {
         </Card.Text>
 
           <form onSubmit={handleSubmit}>
-            <label>First Name:</label>
+            {/* <label>First Name:</label>
             <input
               className="SignInForm"
               type="text"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
             />
-            <br />
+            <br /> */}
             <label>Email:</label>
             <input
               className="SignInForm"

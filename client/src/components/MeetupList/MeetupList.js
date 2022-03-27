@@ -4,22 +4,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchMeetups } from "../../reducers/meetupsSlice";
 
 export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
-  const selectMeetup = useSelector((state) => state.meetups.entities);
+  // const selectMeetup = useSelector((state) => state.meetups.entities);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchMeetups());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchMeetups());
+  // }, [dispatch]);
 
-  console.log(selectMeetup);
+  // console.log(selectMeetup);
 
     return (
       <div className="MeetupList">
         <div className="columns">
           <div className="column">
             {" "}
-            {selectMeetup.map((meetup) => {
+            {meetups.map((meetup) => {
               return (
                 <TestCard
                   key={meetup.id}
