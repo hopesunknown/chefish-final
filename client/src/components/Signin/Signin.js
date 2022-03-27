@@ -46,7 +46,7 @@ export default function Signin({ onLogin }) {
       //   />
       <>
       <SignInForm onLogin={onLogin} />
-      <hr />
+      <hr className="hr" />
       <p className="accountquestion">
         Don't have an account?</p> &nbsp;
         <button onClick={() => setShowLogin(false)}>
@@ -56,7 +56,7 @@ export default function Signin({ onLogin }) {
     ) : (
       <>
       <Signup onLogin={onLogin} />
-          <hr />
+          <hr className="hr" />
           <p className="accountquestion">
             Already have an account?</p> &nbsp;
             <button onClick={() => setShowLogin(true)}>

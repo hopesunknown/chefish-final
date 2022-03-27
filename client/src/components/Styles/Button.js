@@ -25,8 +25,8 @@ function Button({ variant = "fill", color = "primary", ...props }) {
 const ButtonBase = styled.button`
   cursor: pointer;
   font-size: 1rem;
-  border: 1px solid transparent;
-  border-radius: 20px;
+  border: 1px solid;
+  border-radius: 10px;
   padding: 8px 16px;
   margin-left: 40%;
   margin-right: 40%;
@@ -36,9 +36,11 @@ const ButtonBase = styled.button`
 
 const FillButton = styled(ButtonBase)`
   background-color: white;
-  color: darkblue;
+  color: black;
 
   &:hover {
+    background-color: black;
+    color: white;
     opacity: 0.9;
   }
 `;

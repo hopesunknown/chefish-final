@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Button from "../Styles/Button";
+import Error from "../Styles/Error";
+import Input from "../Styles/Input";
+import FormField from "../Styles/FormField";
+import Label from "../Styles/Label";
 
 export default function SignInForm({ onLogin }) {
 
@@ -44,37 +49,38 @@ return (
         Enter your info to access cooking groups near you.
         </Card.Text>
 
-          <form onSubmit={handleSubmit}>
-            {/* <label>First Name:</label>
-            <input
-              className="SignInForm"
-              type="text"
-              value={firstName}
-              onChange={(event) => setFirstName(event.target.value)}
-            />
-            <br /> */}
-            <label>Email:</label>
-            <input
-              className="SignInForm"
-              type="text"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-            <br />
-            <label>Password:</label>
-            <input
-              className="SignInForm"
-              type="text"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-            />
-            <br />
-            <br />
-            <input type="submit" className="SignInBtn"/>
-              {/* {loggedIn ? "Loading..." : "Login"}</input> */}
-          </form>
-
-        Don't have an account? <Link to="/signup">Create Account</Link>
+        <form onSubmit={handleSubmit}>
+    <FormField>
+        <Label htmlFor="username">Email</Label>
+        <Input
+          type="text"
+          id="username"
+          autoComplete="off"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </FormField>
+      <FormField>
+        <Label htmlFor="password">Password</Label>
+        <Input
+          type="password"
+          id="password"
+          autoComplete="current-password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </FormField>
+      
+        <Button variant="fill" color="primary" type="submit">
+          {isLoading ? "Loading..." : "Login"}
+        </Button>
+      
+      <FormField>
+        {errors.map((err) => (
+          <Error key={err}>{err}</Error>
+        ))}
+      </FormField>
+    </form>
       </Card.Body>
 </Card>
 </div>
