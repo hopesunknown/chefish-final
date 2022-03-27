@@ -79,6 +79,53 @@ body {
         transform: scale(1.1);
 }
 
+/* Signin or Signup Page */
+.login_card {
+  text-align: center;
+  margin-left: 35%;
+  margin-top: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.SignInBtn {
+  background-color: black;
+  border: solid;
+  border-width: 2px;
+  border-radius: 15%;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.SignInBtn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+
+.Signin {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.Signup {
+  float: left;
+  width: 30%;
+  padding: 30px;
+  margin: 10px;
+  margin-left: 200px;
+}
+
+
+/* SearchBar */
 .SearchContainer {
   background: linear-gradient(to right, #a81dc4 39%, #f39ce7 99%);
   color: white;
@@ -176,6 +223,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   background-color: white;
+  color: black;
 }
 
 .Submit:hover {
@@ -257,36 +305,7 @@ body {
   } */
 
   /* Center Component Profile */
-  .SignInBtn {
-    background-color: #aa6ba2;
-    border: none;
-    color: white;
-    padding: 10px 27px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 11px;
-  }
-  
-  .SignInBtn:hover {
-    background-color: black;
-    border: none;
-    color: white;
-  }
-
-
-  .Signin {
-    margin-top: 200px;
-    text-align: center;
-  }
-
-  .Signup {
-    float: left;
-    width: 30%;
-    padding: 30px;
-    margin: 10px;
-    margin-left: 200px;
-  }
+ 
 
   .Checkboxes {
     float: left;
