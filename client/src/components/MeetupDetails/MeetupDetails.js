@@ -53,11 +53,13 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             Time: {clickedMeetup.time}
             <br></br>
             Location: {clickedMeetup.location}
+            <hr className="hr"/>
             <h3>Attendees</h3>
             {clickedMeetup.users &&
               clickedMeetup.users.map((u) => {
                 return <p>{u.first_name}</p>;
               })}
+              <hr className="hr"/>
             <h3>Comments </h3>
             {clickedMeetup.comments &&
               clickedMeetup.comments.map((c) => {
@@ -73,6 +75,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             </button>
             <br />
             <br />
+            <hr className="hr"/>
             <form onSubmit={handleSubmit}>
               <label> Did you attend this event?<br/>Leave a comment about your experiences:</label>
               <br />
