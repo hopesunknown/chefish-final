@@ -13,12 +13,6 @@ function App() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("/meetups")
-      .then((response) => response.json())
-      .then((meetups) => setMeetups(meetups));
-  }, []);
-
-  useEffect(() => {
     // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
@@ -26,6 +20,14 @@ function App() {
       }
     });
   }, []);
+
+  useEffect(() => {
+    fetch("/meetups")
+      .then((response) => response.json())
+      .then((meetups) => setMeetups(meetups));
+  }, []);
+
+
 
   function handleLogOutClick(){
     fetch("/logout",{
@@ -40,7 +42,7 @@ function App() {
 }
 
   if (!user) return (
-    <Signin setUser={setUser}/>
+    <Signin onLogin={setUser}/>
   )
 
   return (
@@ -49,8 +51,8 @@ function App() {
         
         <Routes>
           <Route exact path="/signin" element={<Signin 
-          user={user} 
-          setUser={setUser} />} />
+          user={user}
+          onLogin={setUser} />} />
 
           <Route exact path="/profile" element={<Profile 
           user={user} 
@@ -67,11 +69,11 @@ function App() {
 
           <Route exact path="/signup" element={<Signup 
           user={user} 
-          setUser={setUser} />} />
+          onLogin={setUser} />} />
 
           <Route exact path="/" element={<Signin 
           user={user} 
-          setUser={setUser} />} />    
+          onLogin={setUser} />} />    
         </Routes>
 
       </div>
