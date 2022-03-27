@@ -9,9 +9,9 @@ export default function CenterComponentProfile({ handleClick, user, setUser, mee
             <h1>Welcome back {user.first_name}!</h1>
             <h2>Email: {user.email}</h2>
 
-            <p>Looking to host your cooking class in your area? Create one:</p>
+            <p>Looking to host your own cooking class or meetup?</p>
             <button className="SignInBtn" onClick={handleClick}>
-              Create a New Cooking Class
+              Host New Event
             </button>
             <br/>  <br/>
             <p>Thanks for using Chefish!</p>
