@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navigate, Link } from "react-router-dom";
-// import SearchContainer from "../SearchContainer/SearchContainer";
+import { Card } from 'react-bootstrap';
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 
@@ -73,8 +73,14 @@ export default function Signin({ user, setUser, handleLogin }) {
           <ProfileNavBar />
         </div>
         <div className="Signin">
-          <h1>Login to your account</h1>
-          <h4>Enter your info to access cooking groups near you.</h4>
+
+      <Card style={{ width: '30rem' }} className="login_card">
+{/* <Card.Img variant="top" src={umbrella} alt="umbrella" /> */}
+        <Card.Body>
+        <Card.Title><h2>Login to your account</h2></Card.Title>
+        <Card.Text>
+        Enter your info to access cooking groups near you.
+        </Card.Text>
 
           <form onSubmit={handleSubmit}>
             <label>First Name:</label>
@@ -105,12 +111,47 @@ export default function Signin({ user, setUser, handleLogin }) {
             <input type="submit" className="SignInBtn"/>
               {/* {loggedIn ? "Loading..." : "Login"}</input> */}
           </form>
-        </div>
 
-        Don't have an account? <Link to="/Signup">Create Account</Link>
-        <Footer />
-      </div>
+        Don't have an account? <Link to="/signup">Create Account</Link>
+  
+
+      </Card.Body>
+</Card>
+</div>
+<Footer />
+</div>
+
+
+
     )
   
   )
 }
+
+
+// <div>
+// <Card style={{ width: '30rem' }} className="login_card">
+// <Card.Img variant="top" src={umbrella} alt="umbrella" />
+//     <Card.Body>
+//         <Card.Title><h2>Welcome back</h2></Card.Title>
+//         <Card.Text>
+//         Login to your account
+//         </Card.Text>
+//         <form onSubmit={manageLogin}>
+//             <label htmlFor="login" value="Email"></label><br/>
+//             <input
+//                 type="text"
+//                 name="login"
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 placeholder="Email"  /><br></br>
+//             <input
+//                 type="password"
+//                 name="login"
+//                 onChange={handlePassword}
+//                 placeholder="Password"  /><br></br>
+//             <input type="submit" value="Login" className="loginbutton"/>
+//         </form>
+//         <p className="newhere">New Here?</p>
+//             <Link to='/create' className="createaccount">Create Account</Link>
+//     </Card.Body>
+// </Card>
