@@ -71,7 +71,7 @@ function App() {
           user={user} 
           onLogin={setUser} />} />
 
-          <Route exact path="/" element={<Signin 
+          <Route exact path="/" element={<MainPage 
           user={user} 
           onLogin={setUser} />} />    
         </Routes>
