@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
-// import SearchContainer from "../SearchContainer/SearchContainer";
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import Checkboxes from "../Checkboxes/Checkboxes";
@@ -77,12 +76,10 @@ export default function Signup({ user, setUser }) {
         />
     ) : (
       <div>
-        THIS IS THE SIGNUP PAGE
         <div className="NavBar">
           <ProfileNavBar />
-          {/* <SearchContainer /> */}
           <div className="Logo">
-            {/* <img src="/logo1.png" alt="logo" width="100" /> */}
+            chefish
           </div>
         </div>
         <div className="Signup">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 export default function MeetupDetails({ user, setUser, clickedMeetup, handleClickedMeetup }) {
   const [content, setContent] = useState("");
@@ -61,8 +61,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             <h3>Comments </h3>
             {clickedMeetup.comments &&
               clickedMeetup.comments.map((c) => {
-                // console.log(c)
-                return <p style={{ textAlign: "center", backgroundColor: "WhiteSmoke" }}>"{c.content}"</p>;
+                return <p style={{ textAlign: "center" }}>"{c.content}"</p>;
               })}
             <br />
             <button
