@@ -32,7 +32,7 @@ export default function LeftComponentProfile({ userMeetups, user, setUser, userD
 
     return (
       <div className="LeftComponent">
-        <h1>Your Meetups</h1>
+        <h2>Upcoming Meetups</h2>
         {user.meetups &&
           user.meetups.map((m) => {
             return (

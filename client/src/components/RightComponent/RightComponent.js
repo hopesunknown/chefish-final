@@ -28,7 +28,7 @@ console.log(user.topics)
 
     return (
       <div className="RightComponent">
-        <h1>Your Cuisine Interests</h1>
+        <h2>Cuisine Interests</h2>
         {user.topics &&
           user.topics.map((t) => {
             return (

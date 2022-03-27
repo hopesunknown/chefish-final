@@ -166,12 +166,14 @@ body {
 .Submit {
   border-radius: 10px;
   cursor: pointer;
+  background-color: white;
 }
 
 .Submit:hover {
   border-radius: 10px;
   cursor: pointer;
-  background-color: #33cccc;
+  background-color: black;
+  color: white;
 }
 
 .FlipCard{
@@ -219,15 +221,15 @@ body {
   border-radius: 10px;
   text-align: center;
   color: white;
-  height: 120px;
+  height: 160px;
   opacity: 0.5;
 }
 
-  .MeetupCard:hover {
+  /* .MeetupCard:hover {
     opacity:1;
     border-radius:50%;
     cursor: pointer;
-  }
+  } */
 
   /* a:link, a:visited {
     color: black;
@@ -245,11 +247,7 @@ body {
     cursor: pointer;
   } */
 
-  .Signin {
-    margin-top: 200px;
-    text-align: center;
-  }
-
+  /* Center Component Profile */
   .SignInBtn {
     background-color: #aa6ba2;
     border: none;
@@ -259,6 +257,18 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 11px;
+  }
+  
+  .SignInBtn:hover {
+    background-color: black;
+    border: none;
+    color: white;
+  }
+
+
+  .Signin {
+    margin-top: 200px;
+    text-align: center;
   }
 
   .Signup {
