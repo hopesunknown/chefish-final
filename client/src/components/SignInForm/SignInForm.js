@@ -51,10 +51,10 @@ return (
 
         <form onSubmit={handleSubmit}>
     <FormField>
-        <Label htmlFor="username">Email</Label>
+        <Label htmlFor="email">Email</Label>
         <Input
           type="text"
-          id="username"
+          id="email"
           autoComplete="off"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
