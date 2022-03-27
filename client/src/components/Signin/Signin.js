@@ -45,6 +45,7 @@ export default function Signin({ onLogin }) {
       //   loggedIn={loggedIn} 
       //   />
       <>
+      <ProfileNavBar />
       <SignInForm onLogin={onLogin} />
       <hr className="hr" />
       <p className="accountquestion">
@@ -55,6 +56,7 @@ export default function Signin({ onLogin }) {
     </>
     ) : (
       <>
+      <ProfileNavBar />
       <Signup onLogin={onLogin} />
           <hr className="hr" />
           <p className="accountquestion">
