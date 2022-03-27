@@ -147,13 +147,13 @@ export default function Signup({ onLogin }) {
             ))}
           </FormField>
         </form>
+        <div className="Checkboxes">
+          <Checkboxes handleTopicClick={handleTopicClick} />
+        </div>
           </Card.Body>
     </Card>
     </div>
 
-        <div className="Checkboxes">
-          <Checkboxes handleTopicClick={handleTopicClick} />
-        </div>
         <Footer />
     </>
     )}

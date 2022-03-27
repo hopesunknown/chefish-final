@@ -12,13 +12,13 @@ export default function ProfileNavBar() {
         </div>
         <div className="SearchBar"></div>
         <div className="NavLinks">
-          <Link to="/signup">
+          {/* <Link to="/signup">
             Sign Up
           </Link>
           <br></br>
           <Link to="/signin">
             Login
-          </Link>
+          </Link> */}
         </div>
       </div>
 

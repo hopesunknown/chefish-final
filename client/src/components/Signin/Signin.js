@@ -11,8 +11,9 @@ export default function Signin({ onLogin }) {
     const [showLogin, setShowLogin] = useState(true);
 
   return (
-  
-    showLogin ? (
+  <>
+    <ProfileNavBar />
+    {showLogin ? (
       // <Navigate to="/main" 
       //   user={user}
       //   setUser={setUser}
@@ -22,7 +23,6 @@ export default function Signin({ onLogin }) {
       //   loggedIn={loggedIn} 
       //   />
       <>
-        <ProfileNavBar />
         <SignInForm onLogin={onLogin} />
         <hr className="hr" />
         <p className="accountquestion">
@@ -33,7 +33,6 @@ export default function Signin({ onLogin }) {
     </>
     ) : (
       <>
-        <ProfileNavBar />
         <Signup onLogin={onLogin} />
         <hr className="hr" />
         <p className="accountquestion">
@@ -44,6 +43,7 @@ export default function Signin({ onLogin }) {
         </Button>
       </>
      
-    )
+    )}
+    </>
   )
 }
