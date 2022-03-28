@@ -14,14 +14,6 @@ export default function Signin({ onLogin }) {
   <>
     <ProfileNavBar />
     {showLogin ? (
-      // <Navigate to="/main" 
-      //   user={user}
-      //   setUser={setUser}
-      //   firstName={firstName} 
-      //   email={email} 
-      //   password={password} 
-      //   loggedIn={loggedIn} 
-      //   />
       <>
         <SignInForm onLogin={onLogin} />
         <hr className="hr" />

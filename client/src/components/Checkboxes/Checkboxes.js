@@ -16,6 +16,7 @@ useEffect(() => {
 
     return (
       <div>
+        <p>Select cuisine interests:</p>
         <form className="CheckboxSection">
           {topics.map((topic) => {
             return (

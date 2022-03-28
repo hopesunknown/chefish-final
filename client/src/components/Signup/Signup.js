@@ -19,18 +19,6 @@ export default function Signup({ onLogin }) {
   const [isLoading, setIsLoading] = useState(false);
   const [topicArray, setTopicArray] = useState([]);
 
-  // function handleNameChange(event) {
-  //   setFirstName(event.target.value);
-  // };
-
-  // function handleEmailChange(event) {
-  //   setEmail(event.target.value);
-  // };
-
-  // function handlePasswordChange(event) {
-  //   setPassword(event.target.value);
-  // };
-
   function handleSubmit(event) {
     event.preventDefault();
     setErrors([]);
@@ -60,41 +48,6 @@ export default function Signup({ onLogin }) {
   };
 
     return (
-        // <div className="Signup">
-        //   <div className="Signin">
-        //     <h1>Create account:</h1>
-
-        //     <form onSubmit={handleSubmit}>
-        //       <label>First Name:</label>
-        //       <input
-        //       className="SignUpInput"
-        //         type="text"
-        //         value={firstName}
-        //         onChange={(event) => setFirstName(event.target.value)}
-        //       />
-        //       <br />
-        //       <label>Email:</label>
-        //       <input
-        //        className="SignUpInput"
-        //         type="text"
-        //         value={email}
-        //         onChange={(event) => setEmail(event.target.value)}
-        //       />
-        //       <br />
-        //       <label>Password:</label>
-        //       <input
-        //        className="SignUpInput"
-        //         type="text"
-        //         value={password}
-        //         onChange={(event) => setPassword(event.target.value)}
-        //       />
-        //       <br />
-        //       <br />
-
-        //       <input type="submit" className="SignInBtn" />
-        //     </form>
-        //   </div>
-        // </div>
         <>
         <div className="Signin">
     
@@ -102,7 +55,7 @@ export default function Signup({ onLogin }) {
             <Card.Body>
             <Card.Title><h2>Sign up a new account</h2></Card.Title>
             <Card.Text>
-            Sign up to access cooking groups near you.
+            Sign up to join cooking meetups near you.
             </Card.Text>
     
             <form onSubmit={handleSubmit}>
@@ -147,9 +100,8 @@ export default function Signup({ onLogin }) {
             ))}
           </FormField>
         </form>
-        <div className="Checkboxes">
+ 
           <Checkboxes handleTopicClick={handleTopicClick} />
-        </div>
           </Card.Body>
     </Card>
     </div>
