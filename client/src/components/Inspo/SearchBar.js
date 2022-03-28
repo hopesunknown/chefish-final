@@ -2,7 +2,9 @@ import React from 'react'
 
 export default function SearchBar({ handleSubmit, query, isLoading, setQuery }) {
         return (
-            <form onSubmit={handleSubmit}>
+            <form 
+            className="recipe-search"
+            onSubmit={handleSubmit}>
                 <input 
                     value={query}
                     className="form-control"

@@ -1,5 +1,3 @@
-// need to double-check again
-
 import React, { useState } from "react";
 
 export default function NewMeetupForm({ user, setUser }){

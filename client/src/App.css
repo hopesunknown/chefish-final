@@ -465,32 +465,33 @@ body {
 
 
 /* Recipes page - Inspo, RecipeCard, SearchBar */
-.container {
+.recipe-container {
   background-color: #f7f7f7;
   max-width: 1000px;
   min-height: 100vh;
   margin: 30px auto;
   padding: 30px;
   border-radius: 20px;
-}
-
-h1, h2, h3, p {
   text-align: center;
 }
 
-form {
+.inspo-title .meal-title {
+  text-align: center;
+}
+
+.recipe-search {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-input {
+.form-control {
   border: 1px solid #f7f7f7;
   padding: 10px;
   font-size: 16px;
 
 }
-input:focus {
+.form-control:focus {
   outline: none;
 }
 

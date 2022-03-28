@@ -37,7 +37,7 @@ export default function Inspo() {
       <br />
       <br />
     <div className="recipe-container">
-      <h2>Food Recipes</h2>
+      <h2 className="inspo-title">Food Recipes</h2>
       <SearchBar
         isLoading={isLoading}
         query={query}

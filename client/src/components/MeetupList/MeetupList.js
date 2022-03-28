@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TestCard from "../TestCard/TestCard";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchMeetups } from "../../reducers/meetupsSlice";
 
 export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
-  // const selectMeetup = useSelector((state) => state.meetups.entities);
-
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchMeetups());
-  // }, [dispatch]);
-
-  // console.log(selectMeetup);
 
   console.log(meetups)
 
