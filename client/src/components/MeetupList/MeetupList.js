@@ -14,12 +14,14 @@ export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
 
   // console.log(selectMeetup);
 
+  console.log(meetups)
+
     return (
       <div className="MeetupList">
         <div className="columns">
           <div className="column">
             {" "}
-            {meetups.map((meetup) => {
+            {meetups?.map((meetup) => {
               return (
                 <TestCard
                   key={meetup.id}

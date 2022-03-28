@@ -4,9 +4,13 @@ import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 export default function TestCard({ meetup, joinMeetup, user, setUser}) {
 
+  console.log(meetup);
+  console.log(meetup.topic);
+  // console.log(meetup.topic["topic_name"]);
+
     const ref = useRef();
 
-    console.log(meetup.topic["topic_name"])
+    // console.log(meetup.topic["topic_name"])
     return (
       
     <div onClick={() => joinMeetup(meetup)}>
@@ -47,7 +51,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
           <h1>{meetup.title}</h1>
           <h3>{meetup.location}</h3>
           <h3>{meetup.date}</h3>
-          <h3>{meetup.topic["topic_name"]}</h3>
+          {/* <h3>{meetup.topic["topic_name"]}</h3> */}
         </BackSide>
       </Flippy>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import MeetupList from "../MeetupList/MeetupList";
 
-export default function CenterComponent({ user, setUser, filteredMeetups, joinMeetup }) {
+export default function CenterComponent({ user, setUser, meetups, joinMeetup }) {
 
     return (
       <div className="CenterComponent">
@@ -9,7 +9,7 @@ export default function CenterComponent({ user, setUser, filteredMeetups, joinMe
           <MeetupList
             user={user}
             setUser={setUser}
-            meetups={filteredMeetups}
+            meetups={meetups}
             joinMeetup={joinMeetup}
           />
         </div>

@@ -19,7 +19,7 @@ export default function AllThree({ user, setUser, meetups, setMeetups, filteredM
           setUser={setUser}
           meetups={meetups}
           setMeetups={setMeetups}
-          filteredMeetups={filteredMeetups}
+          // filteredMeetups={filteredMeetups}
           joinMeetup={joinMeetup}
         />
         <MeetupDetails
