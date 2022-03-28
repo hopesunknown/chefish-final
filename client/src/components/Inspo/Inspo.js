@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import "./App.css";
 import SearchBar from "./SearchBar";
 import RecipeCard from "./RecipeCard";
+
 const searchApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 export default function Inspo() {
