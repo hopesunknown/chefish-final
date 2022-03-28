@@ -71,6 +71,10 @@ function App() {
           user={user} 
           onLogin={setUser} />} />
 
+          <Route exact path="/recipes" element={<Inspo 
+          user={user}
+          onLogin={setUser} />} />
+
           <Route exact path="/" element={<MainPage 
           user={user} 
           onLogin={setUser}
