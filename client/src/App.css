@@ -464,7 +464,7 @@ body {
 
 
 
-/* Inspo Page */
+/* Recipes page - Inspo, RecipeCard, SearchBar */
 .container {
   background-color: #f7f7f7;
   max-width: 1000px;
@@ -515,7 +515,7 @@ input:focus {
   margin-top: 20px;
 }
 
-.card {
+.recipe-card {
   width: 200px;
   background-color: white;
   margin: 10px;
@@ -532,6 +532,6 @@ input:focus {
   text-align: center;
 }
 
-.category {
+.recipe-category {
   color: #a1a1a1;
 }

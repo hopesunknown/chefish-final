@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import "./App.css";
+import NavBar from '../NavBar/NavBar';
 import SearchBar from "./SearchBar";
 import RecipeCard from "./RecipeCard";
 
@@ -30,8 +31,13 @@ export default function Inspo() {
   }
 
   return (
-    <div className="container">
-      <h2>Our Food Recipes</h2>
+      <>
+      <NavBar />
+      <br />
+      <br />
+      <br />
+    <div className="recipe-container">
+      <h2>Food Recipes</h2>
       <SearchBar
         isLoading={isLoading}
         query={query}
@@ -45,8 +51,9 @@ export default function Inspo() {
              key={recipe.idMeal}
              recipe={recipe}
           />
-        )) : "No Results."}
+        )) : "No Results"}
       </div>
     </div>
+    </>
   );
 }
