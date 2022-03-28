@@ -465,6 +465,9 @@ body {
 
 
 /* Inspo Page */
+.main-inspo {
+  background-color: black;
+}
 
 .heading h1{
   color:white;
@@ -586,7 +589,7 @@ body {
 .container{
   width:100%;
   height:100vh;
-  background-color: brown;
+  background-color: black;
 }
 .card-container{
   width:300px;
