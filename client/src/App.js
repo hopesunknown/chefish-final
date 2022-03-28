@@ -5,6 +5,7 @@ import Signup from "../src/components/Signup/Signup";
 import Signin from "../src/components/Signin/Signin";
 import Profile from "../src/components/Profile/Profile";
 import MainPage from "../src/components/MainPage/MainPage";
+import Inspo from "../src/components/Inspo/Inspo"
 
 function App() {
   const [user, setUser] = useState(null);
