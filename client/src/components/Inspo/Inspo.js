@@ -1,51 +1,51 @@
 import React, { useState, useEffect } from "react";
-import MealItem from "./MealItem";
-// import './style.css';
+// import "./App.css";
+import SearchBar from "./components/SearchBar";
+import RecipeCard from "./components/RecipeCard";
+const searchApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 export default function Inspo() {
-    const [search, setSearch] = useState("");
-    const [meal, setMeal] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [recipes, setRecipes] = useState([]);
+  
+  // search for the recipe
+  const searchRecipes = async () => {
+    setIsLoading(true);
+    const url = searchApi + query
+    const res = await fetch(url);
+    const data = await res.json();
+    setRecipes(data.meals);
+    setIsLoading(false);
+  };
 
-    // function searchMeal(evt) {
-    //     if(evt.key === "Enter")
-    //     {
+  useEffect(() => {
+    searchRecipes()
+  }, []);
 
-    useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
-        .then(res => res.json())
-        .then(data => {setMeal(data.meals);setSearch("")})
-        }, []);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    searchRecipes();
+  }
 
-        console.log(meal);
-
-        function searchMeal(event) {
-            if (event.key === "Enter") {
-
-            }
-        }
-
-    return (
-        <>
-            <div className="main-inspo">
-                <div className="heading">
-                    <h1>Search Recipes</h1>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque tempore unde sed ducimus voluptates illum!</h4>
-                </div>
-                <div className="searchBox">
-                    <input 
-                    type="search" className="search-bar" onChange={(e) => setSearch(e.target.value)} 
-                    value={search} 
-                    onKeyPress={searchMeal}/>
-                </div>
-                <div className="container">
-                   {   
-                    (meal === null) ? (<p className="notSearch">Not found</p>) : 
-                         (meal.map((res) => {
-                             return(
-                            <MealItem data={res}/>)}))
-                   }
-                </div>
-            </div>
-        </>
-    )
+  return (
+    <div className="container">
+      <h2>Our Food Recipes</h2>
+      <SearchBar
+        isLoading={isLoading}
+        query={query}
+        setQuery={setQuery}
+        handleSubmit={handleSubmit}
+      />
+      <div className="recipes">
+        
+        {recipes ? recipes.map(recipe => (
+          <RecipeCard
+             key={recipe.idMeal}
+             recipe={recipe}
+          />
+        )) : "No Results."}
+      </div>
+    </div>
+  );
 }
