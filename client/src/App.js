@@ -60,12 +60,12 @@ function App() {
           meetups={meetups} 
           setMeetups={setMeetups} />} />
 
-          <Route exact path="/main" element={<MainPage 
+          {/* <Route exact path="/main" element={<MainPage 
           user={user} 
           setUser={setUser} 
           meetups={meetups} 
           setMeetups={setMeetups}
-          handleLogOutClick={handleLogOutClick} />} />
+          handleLogOutClick={handleLogOutClick} />} /> */}
 
           <Route exact path="/signup" element={<Signup 
           user={user} 
@@ -73,7 +73,10 @@ function App() {
 
           <Route exact path="/" element={<MainPage 
           user={user} 
-          onLogin={setUser} />} />    
+          onLogin={setUser}
+          meetups={meetups} 
+          setMeetups={setMeetups}
+          handleLogOutClick={handleLogOutClick} />} />    
         </Routes>
 
       </div>
