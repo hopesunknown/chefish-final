@@ -10,7 +10,7 @@ export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
         <div className="columns">
           <div className="column">
             {" "}
-            {meetups?.map((meetup) => {
+            {meetups && meetups.map((meetup) => {
               return (
                 <TestCard
                   key={meetup.id}

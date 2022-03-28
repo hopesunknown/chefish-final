@@ -7,6 +7,10 @@ a {
   color: black;
 }
 
+a:hover {
+  color: red;
+}
+
 .App {
   text-align: center;
 }
@@ -259,23 +263,7 @@ a {
   border-radius: 15px;
 }
 
-/* Footer code */
 
-.Footer {
-  background-color: black;
-  font-size: 12px;
-  color: white;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-}
-
-.footer-link {
-  color: white;
-}
 
 .NavLinks {
   right: 0;
@@ -386,6 +374,8 @@ a {
     margin-bottom: 30px;
   }
 
+  /* CenterComponentProfile & New Meetup Form */
+
   .CenterComponentProfile {
     background-color: darkgrey;
     width: 40%;
@@ -393,6 +383,7 @@ a {
     padding: 30px;
     margin-top: 10px;
     text-align: center;
+    border-radius: 10px;
   }
 
   .CreateMeetupBtn {
@@ -420,18 +411,13 @@ a {
   }
 
   .OutsideForm {
-    border: 10px solid;
+    border: 1px solid;
     margin: 10px; 
     padding: 10px;
     border-radius: 20px;
-    background-color: #33cccc;
-    color: white;
+    background-color: white;
+    color: black;
   }
-
-  .OutsideForm:hover {
-    opacity:1;
-  }
-
 
 /* Recipes page - Inspo, RecipeCard, SearchBar */
 .recipe-container {
@@ -504,4 +490,24 @@ a {
 
 .recipe-category {
   color: #a1a1a1;
+}
+
+
+/* Footer code */
+
+.Footer {
+  background-color: black;
+  font-size: 12px;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: underline;
 }

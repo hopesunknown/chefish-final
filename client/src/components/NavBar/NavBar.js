@@ -10,7 +10,7 @@ export default function NavBar({ searchWord, handleChange, userInfo, user, setUs
     <>
       <Navbar fixed="top" bg="light" variant="light" className="nav-bar" style={{ minWidth: 700 }}>
   {/* <img id="umbrella" src={umbrella} alt="umbrella"/> */}
-      <Navbar.Brand href="/main" className="Logo">chefish</Navbar.Brand>
+      <Navbar.Brand href="/" className="Logo">chefish</Navbar.Brand>
       <div className="SearchBar">
           <SearchBar
             searchWord={searchWord}
