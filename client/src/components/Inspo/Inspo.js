@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MealItem from "./MealItem";
 // import './style.css';
 
-export default function Inspo {
+export default function Inspo() {
     const [search, setSearch] = useState("");
     const [Mymeal,setMeal] = useState();
     const searchMeal=(evt)=>{
