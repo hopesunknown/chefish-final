@@ -2,6 +2,11 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -122,6 +127,10 @@ body {
   padding: 30px;
   margin: 10px;
   margin-left: 200px;
+}
+
+.accountquestion {
+  text-align: center;
 }
 
 
