@@ -6,7 +6,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
 
   console.log(meetup);
   console.log(meetup.topic);
-  // console.log(meetup.topic["topic_name"]);
+  // console.log(meetup.topics["topic_name"]);
 
     const ref = useRef();
 
