@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 
-export default function TestCard({ meetup, joinMeetup, user, setUser}) {
+export default function TestCard({ id, meetup, joinMeetup, user, setUser, handleRemoveMeetup}) {
 
   console.log(meetup);
   console.log(meetup.topic);
@@ -52,6 +52,7 @@ export default function TestCard({ meetup, joinMeetup, user, setUser}) {
           <h3>{meetup.location}</h3>
           <h3>{meetup.date}</h3>
           {/* <h3>{meetup.topic["topic_name"]}</h3> */}
+          <button className="delete-button">Remove</button>
         </BackSide>
       </Flippy>
       </div>

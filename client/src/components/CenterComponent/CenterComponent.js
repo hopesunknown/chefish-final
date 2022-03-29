@@ -1,7 +1,7 @@
 import React from "react";
 import MeetupList from "../MeetupList/MeetupList";
 
-export default function CenterComponent({ user, setUser, meetups, joinMeetup }) {
+export default function CenterComponent({ user, setUser, meetups, joinMeetup, handleRemoveMeetup }) {
 
     return (
       <div className="CenterComponent">
@@ -11,6 +11,7 @@ export default function CenterComponent({ user, setUser, meetups, joinMeetup }) 
             setUser={setUser}
             meetups={meetups}
             joinMeetup={joinMeetup}
+            handleRemoveMeetup={handleRemoveMeetup}
           />
         </div>
       </div>

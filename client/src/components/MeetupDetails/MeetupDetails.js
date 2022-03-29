@@ -43,6 +43,18 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
     }, 1000);
   };
 
+  // function handleDelete(){
+  //   fetch(`/meetups/${id}`, { 
+  //     method: 'DELETE',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //   handleDeleteMeetup(id)
+  // }
+
+  // <button className="delete-button" onClick={handleDelete}>Remove Comment</button>
+
     return (
       <div className="MeetupDetails">
         {clickedMeetup ? (
@@ -61,7 +73,8 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             <h3>Comments </h3>
             {clickedMeetup.comments &&
               clickedMeetup.comments.map((c) => {
-                return <p style={{ textAlign: "center" }}>"{c.content}"</p>;
+                return <><p style={{ textAlign: "center" }}>"{c.content}"</p>
+                </>;
               })}
             <br />
             <button

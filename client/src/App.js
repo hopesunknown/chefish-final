@@ -10,6 +10,7 @@ import Inspo from "../src/components/Inspo/Inspo"
 function App() {
   const [user, setUser] = useState(null);
   const [meetups, setMeetups] = useState([]);
+  const [removeRequest, setRemoveRequest] = useState(false);
 
   const navigate = useNavigate()
 
@@ -28,7 +29,14 @@ function App() {
       .then((meetups) => setMeetups(meetups));
   }, []);
 
-
+  function handleRemoveMeetup(id) {
+    fetch(`/meetups/${id}`, {
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(setRemoveRequest(!removeRequest))
+  }
 
   function handleLogOutClick(){
     fetch("/logout",{
@@ -81,7 +89,8 @@ function App() {
           onLogin={setUser}
           meetups={meetups} 
           setMeetups={setMeetups}
-          handleLogOutClick={handleLogOutClick} />} />    
+          handleLogOutClick={handleLogOutClick}
+          handleRemoveMeetup={handleRemoveMeetup} />} />    
         </Routes>
 
       </div>

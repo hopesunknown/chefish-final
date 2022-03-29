@@ -6,7 +6,7 @@ import AllThree from "../AllThree/AllThree";
 
 const userId = 0;
 
-export default function MainPage({ user, setUser, meetups, setMeetups, handleLogOutClick }) {
+export default function MainPage({ user, setUser, meetups, setMeetups, handleLogOutClick, handleRemoveMeetup }) {
   // const [meetups, setMeetups] = useState([]);
   const [searchWord, setSearchWord] = useState("");
   const [comments, setComments] = useState([]);
@@ -68,6 +68,7 @@ export default function MainPage({ user, setUser, meetups, setMeetups, handleLog
           joinMeetup={joinMeetup}
           clickedMeetup={clickedMeetup}
           handleClickedMeetup={handleClickedMeetup}
+          handleRemoveMeetup={handleRemoveMeetup}
         />
         <Footer user={user} setUser={setUser} />
       </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TestCard from "../TestCard/TestCard";
 
-export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
+export default function MeetupList({ meetups, joinMeetup, user, setUser, handleRemoveMeetup }) {
 
   console.log(meetups)
 
@@ -14,8 +14,10 @@ export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
               return (
                 <TestCard
                   key={meetup.id}
+                  id={meetup.id}
                   meetup={meetup}
                   joinMeetup={joinMeetup}
+                  handleRemoveMeetup={handleRemoveMeetup}
                 />
               );
             })}
