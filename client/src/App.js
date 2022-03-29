@@ -29,15 +29,6 @@ function App() {
       .then((meetups) => setMeetups(meetups));
   }, []);
 
-  function handleRemoveMeetup(id) {
-    fetch(`/meetups/${id}`, {
-      method: "DELETE",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(setRemoveRequest(!removeRequest))
-  }
-
   function handleLogOutClick(){
     fetch("/logout",{
         method: "DELETE"
@@ -90,7 +81,7 @@ function App() {
           meetups={meetups} 
           setMeetups={setMeetups}
           handleLogOutClick={handleLogOutClick}
-          handleRemoveMeetup={handleRemoveMeetup} />} />    
+          />} />    
         </Routes>
 
       </div>

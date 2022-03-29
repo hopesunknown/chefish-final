@@ -3,7 +3,7 @@ import LeftComponent from "../LeftComponent/LeftComponent";
 import CenterComponent from "../CenterComponent/CenterComponent";
 import MeetupDetails from "../MeetupDetails/MeetupDetails";
 
-export default function AllThree({ user, setUser, meetups, setMeetups, filteredMeetups, comments, joinMeetup, clickedMeetup, handleClickedMeetup, handleRemoveMeetup }) {
+export default function AllThree({ user, setUser, meetups, setMeetups, filteredMeetups, comments, joinMeetup, clickedMeetup, handleClickedMeetup }) {
 
     return (
       <div className="AllThree">
@@ -21,7 +21,6 @@ export default function AllThree({ user, setUser, meetups, setMeetups, filteredM
           setMeetups={setMeetups}
           // filteredMeetups={filteredMeetups}
           joinMeetup={joinMeetup}
-          handleRemoveMeetup={handleRemoveMeetup}
         />
         <MeetupDetails
           user={user}
