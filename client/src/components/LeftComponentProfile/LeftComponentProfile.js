@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import MeetupCard from "../MeetupCard/MeetupCard";
 
 export default function LeftComponentProfile({ userMeetups, user, setUser, userDetails, meetups, setMeetups }) {

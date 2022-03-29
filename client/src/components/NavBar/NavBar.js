@@ -22,15 +22,19 @@ export default function NavBar({ searchWord, handleChange, userInfo, user, setUs
         </div>
           <Nav
           className="navlinks"
-          style={{ paddingRight: 10 }}
+          style={{ paddingRight: 50 }}
           >
-              <Nav.Link href="/">Home</Nav.Link>&nbsp;&nbsp;&nbsp;&nbsp;
+              <Nav.Link href="/">Home</Nav.Link>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-              <Nav.Link href="/profile">Account</Nav.Link>&nbsp;&nbsp;&nbsp;&nbsp;
+              <Nav.Link href="/recipes">Recipes</Nav.Link>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-              <Nav.Link href="/recipes">Recipes</Nav.Link>&nbsp;&nbsp;&nbsp;&nbsp;
+              <Nav.Link href="/profile">Account</Nav.Link>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-              <Nav.Link onClick={handleLogOutClick}>Logout</Nav.Link>&nbsp;&nbsp;&nbsp;&nbsp;
+              <Nav.Link onClick={handleLogOutClick}>Logout</Nav.Link>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </Nav>
 </Navbar>
       {/* <div className="NavBar">

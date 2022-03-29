@@ -95,7 +95,7 @@ export default function Signup({ onLogin }) {
             </Button>
           
           <FormField>
-            {errors.map((err) => (
+            {errors && errors.map((err) => (
               <Error key={err}>{err}</Error>
             ))}
           </FormField>

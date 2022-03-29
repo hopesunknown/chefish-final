@@ -47,6 +47,6 @@ class TopicsController < ApplicationController
     end
 
     def topic_params
-        params.require(:topic).permit(:meetup_ids, :user_ids, :topic_name, :description)
+        params.permit(:meetup_ids, :user_ids, :topic_name, :description)
     end
 end
