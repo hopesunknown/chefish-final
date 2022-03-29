@@ -31,7 +31,8 @@ export default function Signup({ onLogin }) {
       body: JSON.stringify({
         first_name: firstName,
         email: email,
-        password: password
+        password: password,
+        // topic: topicArray
       })
     }).then((r) => {
       setIsLoading(false);
@@ -42,6 +43,8 @@ export default function Signup({ onLogin }) {
       }
     });
   }
+
+console.log(topicArray)
 
   function handleTopicClick(topic) {
     setTopicArray([...topicArray, topic])

@@ -32,9 +32,10 @@ class UsersController < ApplicationController
     def create
         # user = User.new(user_params)
         # user.save
+        byebug
         user = User.create!(user_params)
         params["topicArray"].each do |topic| 
-        UserTopic.create(user_id: user.id, topic_id: topic["id"])
+        UserTopic.create(user_id: user.id, topic_id: topic.id)
         session[:user_id] = user.id
         end
 
