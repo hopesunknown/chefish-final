@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import EditComment from './EditComment';
 
 export default function MeetupDetails({ user, setUser, clickedMeetup, handleClickedMeetup }) {
   const [content, setContent] = useState("");
   // const [userId, setUserId] = useState(user.id);
+  const [commentData, setCommentData] = useState([]);
+  const [edit, setEdit] = useState(true);
 
   function handleClick(clickedMeetup) {
     alert("Meetup Saved!");
@@ -18,6 +21,12 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
       }),
     })
   };
+
+  useEffect(() => {
+    fetch("/comments")
+    .then((r) => r.json())
+    .then((comments) => { setCommentData(comments) });
+}, []);
 
   function handleCommentChange(event) {
     setContent(event.target.value) };
@@ -43,6 +52,23 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
     }, 1000);
   };
 
+  function handleUpdatedComment(updatedCommentObj) {
+    // const editedComments = commentData.map((comment) => {
+    //   if (comment.id === updatedCommentObj.id) {
+    //     return updatedCommentObj;
+    //   } else {
+    //     return comment;
+    //   }
+    // });
+    // setCommentData(editedComments);
+    // window.location.reload();
+
+    setCommentData(updatedCommentObj);
+  }
+
+  function handleSetEdit(){
+    setEdit(!edit);
+  }
 
     return (
       <div className="MeetupDetails">
@@ -62,7 +88,16 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             <h3>Comments </h3>
             {clickedMeetup.comments &&
               clickedMeetup.comments.map((c) => {
-                return <><p style={{ textAlign: "center" }}>"{c.content}"</p>
+                return <>{edit ? (
+                <>
+                  <p style={{ textAlign: "center" }}>"{c.content}"</p>
+                  <button className="edit-comment-btn" onClick={handleSetEdit}>Edit</button>
+                </>
+                ) : (
+                <>
+                  <EditComment id={c.id} user={user} comment={c} setEdit={setEdit} handleUpdatedComment={handleUpdatedComment} />
+                  <button className="edit-comment-btn" onClick={handleSetEdit}>Edit</button>
+                </>)}
                 </>;
               })}
             <br />

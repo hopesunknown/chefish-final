@@ -36,7 +36,7 @@ function App() {
             setUser(null);
         }
     });
-    // Navigate to home page after logout and clear history
+    // Navigate to homepage after logout and clear history
     navigate("/");
 }
 
@@ -47,7 +47,6 @@ function App() {
   return (
     <>
       <div className="App">
-        
         <Routes>
           <Route exact path="/signin" element={<Signin 
           user={user}
@@ -58,13 +57,6 @@ function App() {
           setUser={setUser} 
           meetups={meetups} 
           setMeetups={setMeetups} />} />
-
-          {/* <Route exact path="/main" element={<MainPage 
-          user={user} 
-          setUser={setUser} 
-          meetups={meetups} 
-          setMeetups={setMeetups}
-          handleLogOutClick={handleLogOutClick} />} /> */}
 
           <Route exact path="/signup" element={<Signup 
           user={user} 
@@ -82,7 +74,6 @@ function App() {
           handleLogOutClick={handleLogOutClick}
           />} />    
         </Routes>
-
       </div>
     </>
   );

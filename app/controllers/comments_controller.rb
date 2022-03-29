@@ -22,20 +22,19 @@ class CommentsController < ApplicationController
         )
         render json: comment
     end
-
-    def edit 
-        comment = find_comment
-    end
     
     def update
         comment = find_comment
-        user = User.find(comment_params[:user_id])
-        meetup = Meetup.find(comment_params[:meetup_id])
+        # user = User.find(comment_params[:user_id])
+        # meetup = Meetup.find(comment_params[:meetup_id])
 
-        if comment.valid?
-            comment.user = user 
-            comment.meetup = meetup
-        end
+        comment.update!(comment_params)
+        render json: comment, status: :ok
+
+        # if comment.valid?
+        #     comment.user = user 
+        #     comment.meetup = meetup
+        # end
     end
 
     def destroy 
