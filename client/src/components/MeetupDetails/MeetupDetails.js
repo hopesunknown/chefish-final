@@ -26,7 +26,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
     fetch("/comments")
     .then((r) => r.json())
     .then((comments) => { setCommentData(comments) });
-}, []);
+  }, []);
 
   function handleCommentChange(event) {
     setContent(event.target.value) };
@@ -89,15 +89,28 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             {clickedMeetup.comments &&
               clickedMeetup.comments.map((c) => {
                 return <>{edit ? (
-                <>
-                  <p style={{ textAlign: "center" }}>"{c.content}"</p>
-                  <button className="edit-comment-btn" onClick={handleSetEdit}>Edit</button>
-                </>
-                ) : (
-                <>
-                  <EditComment id={c.id} user={user} comment={c} setEdit={setEdit} handleUpdatedComment={handleUpdatedComment} />
-                  <button className="edit-comment-btn" onClick={handleSetEdit}>Edit</button>
-                </>)}
+                  <>
+                    <p 
+                      style={{ textAlign: "center" }}>"{c.content}"
+                    </p>
+                    <button 
+                      className="edit-comment-btn" 
+                      onClick={handleSetEdit}>Edit
+                    </button>
+                  </>
+                  ) : (
+                  <>
+                    <EditComment 
+                      id={c.id} 
+                      user={user} 
+                      comment={c} 
+                      setEdit={setEdit} 
+                      handleUpdatedComment={handleUpdatedComment} 
+                    />
+                    <button 
+                      className="edit-comment-btn" 
+                      onClick={handleSetEdit}>Edit</button>
+                  </>)}
                 </>;
               })}
             <br />
@@ -111,7 +124,9 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
             <br />
             <hr className="hr"/>
             <form onSubmit={handleSubmit}>
-              <label> Did you attend this event?<br/>Leave a comment about your experiences:</label>
+              <label> Did you attend this event?<br/>
+              Leave a comment about your experiences:
+              </label>
               <br />
               <input
                 type="textarea"
