@@ -48,8 +48,6 @@ export default function AllThreeProfile({ user, setUser, meetups, setMeetups }) 
         )}
 
         <RightComponent
-          // userTopics={userInfo.topics}
-          // userDetails={user}
           meetups={meetups}
           setMeetups={setMeetups}
           user={user}

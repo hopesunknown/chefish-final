@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Button from "../Styles/Button";
 import Error from "../Styles/Error";
@@ -9,8 +8,6 @@ import FormField from "../Styles/FormField";
 import Label from "../Styles/Label";
 
 export default function SignInForm({ onLogin }) {
-
-const [firstName, setFirstName] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [errors, setErrors] = useState([]);

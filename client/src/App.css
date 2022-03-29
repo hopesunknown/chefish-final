@@ -232,6 +232,7 @@ a:hover {
   float: left;
   padding: 30px;
   margin: 10px;
+  margin-bottom: 100px;
 }
 
 .CenterComponent {
@@ -253,6 +254,7 @@ a:hover {
   float: left;
   padding: 30px;
   margin: 10px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
@@ -360,6 +362,7 @@ a:hover {
     margin-right: 30px;
     margin-top: 50px;
     margin-left: 30px;
+    margin-bottom: 100px;
   }
 
   .comment-box {
@@ -384,6 +387,7 @@ a:hover {
     margin-top: 10px;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: 100px;
   }
 
   .CreateMeetupBtn {

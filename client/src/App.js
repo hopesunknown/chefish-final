@@ -10,7 +10,6 @@ import Inspo from "../src/components/Inspo/Inspo"
 function App() {
   const [user, setUser] = useState(null);
   const [meetups, setMeetups] = useState([]);
-  const [removeRequest, setRemoveRequest] = useState(false);
 
   const navigate = useNavigate()
 

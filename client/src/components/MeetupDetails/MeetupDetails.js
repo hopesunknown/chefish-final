@@ -43,17 +43,6 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
     }, 1000);
   };
 
-  // function handleDelete(){
-  //   fetch(`/meetups/${id}`, { 
-  //     method: 'DELETE',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //   handleDeleteMeetup(id)
-  // }
-
-  // <button className="delete-button" onClick={handleDelete}>Remove Comment</button>
 
     return (
       <div className="MeetupDetails">

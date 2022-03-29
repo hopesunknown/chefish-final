@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import SignInForm from '../SignInForm/SignInForm';
 import Signup from '../Signup/Signup';
 import Button from '../Styles/Button';
-
 
 export default function Signin({ onLogin }) {
     const [showLogin, setShowLogin] = useState(true);
@@ -38,6 +36,7 @@ export default function Signin({ onLogin }) {
       </>
      
     )}
+    <Footer />
     </>
   )
 }

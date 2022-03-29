@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import Checkboxes from "../Checkboxes/Checkboxes";
 import { Card } from 'react-bootstrap';
 import Button from "../Styles/Button";

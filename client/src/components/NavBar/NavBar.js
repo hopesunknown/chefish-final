@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-// import "../src/App.css";
 import SearchBar from "../SearchBar/SearchBar";
 import { Navbar, Nav } from 'react-bootstrap';
 

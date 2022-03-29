@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TestCard from "../TestCard/TestCard";
 
 export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
@@ -22,11 +22,5 @@ export default function MeetupList({ meetups, joinMeetup, user, setUser }) {
           </div>
         </div>
       </div>
-
-    //   <div>
-    //   {meetupPics.map((pic) => (
-    //     <img key={pic.id} src={pic.url} alt="meetup" />
-    //   ))}
-    // </div>
     );
   }

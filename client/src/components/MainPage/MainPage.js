@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
-// import SearchContainer from "../SearchContainer/SearchContainer";
 import AllThree from "../AllThree/AllThree";
 
 const userId = 0;
