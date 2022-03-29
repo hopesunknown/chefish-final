@@ -25,18 +25,19 @@ class UsersController < ApplicationController
         # render json: user.to_json(
         #     :include => [:topics, {:meetups => {:include => :topic}}, :comments])
 
-            render json: current_user.to_json(
+        render json: current_user.to_json(
                 :include => [:topics, {:meetups => {:include => :topic}}, :comments])
     end
     
     def create
         # user = User.new(user_params)
         # user.save
-        byebug
-        user = User.create!(user_params)
-        params["topicArray"].each do |topic| 
-        UserTopic.create(user_id: user.id, topic_id: topic.id)
+        user = User.create(user_params)
         session[:user_id] = user.id
+        params["topicArray"].each do |topic| 
+        # UserTopic.create(user_id: user.id, topic_id: topic.id)
+        usertopic = UserTopic.find_by(user_id: params[:user_id], topic_id: params[:topic_id])
+        usertopic.create
         end
 
         if user.valid?
@@ -46,9 +47,9 @@ class UsersController < ApplicationController
         end
     end
 
-    def edit
-        user = User.find(params[:id])
-    end
+    # def edit
+    #     user = User.find(params[:id])
+    # end
     
     def update
         user = User.find(params[:id])
@@ -69,13 +70,6 @@ class UsersController < ApplicationController
     end
 
     def leaveMeetup
-        # user = User.find(params[:id])
-        # meetups = Meetup.find(params[:user][:meetup_ids])
-
-        # UserMeetup.create(user_id: params[:user_id], meetup_id: params[:meetup_id])
-        
-        # um = UserMeetup.find(params[:id])
-        
         um = UserMeetup.find_by(user_id: params[:user_id], meetup_id: params[:meetup_id])
         um.destroy
         head :no_content

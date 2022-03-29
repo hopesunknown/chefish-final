@@ -7,11 +7,11 @@ export default function SearchBar({ searchWord, handleChange, meetups, setMeetup
         <form>
           <label>
           <span className="iconify" data-icon="et-magnifying-glass" data-inline="false"></span>
-          Search cooking classes:&nbsp;&nbsp;&nbsp;
             <input  
               className="Search"
               type="text"
               name="name"
+              placeholder="Search meetups"
               onChange={(event) => handleChange(event)}
             />
           </label>

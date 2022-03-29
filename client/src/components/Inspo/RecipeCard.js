@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function RecipeCard({ recipe }) {
-    const { idMeal, strMeal, strCategory, strMealThumb } = recipe;
+    const { idMeal, strMeal, strCategory, strArea, strMealThumb } = recipe;
         
         return (
             <div className="recipe-card">
@@ -11,9 +11,12 @@ export default function RecipeCard({ recipe }) {
                     className="card-image"
                 />
                 <div className="card-body">
-                    <span className="recipe-category">{strCategory}</span>
+                    <span className="recipe-category">{strArea}</span>
                     <h3 className="meal-title">{strMeal}</h3>
-                    <a href={"https://www.themealdb.com/meal/" + idMeal} target="_blank">Instructions</a>
+                    <a 
+                    href={"https://www.themealdb.com/meal/" + idMeal} 
+                    target="_blank"
+                    className="instructions-link">Instructions</a>
                 </div>
             </div>
         )

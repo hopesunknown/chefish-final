@@ -8,7 +8,7 @@ export default function SearchBar({ handleSubmit, query, isLoading, setQuery }) 
                 <input 
                     value={query}
                     className="form-control"
-                    placeholder="Search Recipe"
+                    placeholder="Search recipes"
                     name="query"
                     disabled={isLoading}
                     onChange={(event) => setQuery(event.target.value)}

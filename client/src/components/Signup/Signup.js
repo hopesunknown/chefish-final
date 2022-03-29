@@ -32,7 +32,7 @@ export default function Signup({ onLogin }) {
         first_name: firstName,
         email: email,
         password: password,
-        // topic: topicArray
+        topicArray: topicArray
       })
     }).then((r) => {
       setIsLoading(false);
