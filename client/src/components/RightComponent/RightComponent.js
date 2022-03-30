@@ -34,10 +34,10 @@ console.log(user.topics)
         {user.topics &&
           user.topics.map((t) => {
             return (
-              <>
-              <p>
+              <div className="topic-card">
+              <h3>
                 {t.topic_name}
-                </p>
+                </h3>
                 <p>
                 {t.description}
                 </p>
@@ -49,7 +49,7 @@ console.log(user.topics)
                   x
                 </button>
               </p>
-              </>
+              </div>
             );
           })}
           </div>
