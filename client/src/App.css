@@ -490,16 +490,42 @@ a:hover {
     margin-bottom: 100px;
   }
 
-  .CreateMeetupBtn {
+  .host-new-btn {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+  }
+
+  .host-new-btn:hover {
     border-radius: 10px;
     cursor: pointer;
+    background-color: white;
+    color: red;
+  }
+
+  .CreateMeetupBtn {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
   }
 
   .CreateMeetupBtn:hover {
     border-radius: 10px;
     cursor: pointer;
-    background-color: #3366cc;
-    color: white;
+    background-color: white;
+    color: red;
   }
 
   .MeetupForm {

@@ -13,7 +13,7 @@ export default function CenterComponentProfile({ handleClick, user, setUser, mee
             </p>
             <hr/>
             <p>Looking to host your own cooking class or meetup?</p>
-            <button className="SignInBtn" onClick={handleClick}>
+            <button className="host-new-btn" onClick={handleClick}>
               Host New Event
             </button>
           </div>

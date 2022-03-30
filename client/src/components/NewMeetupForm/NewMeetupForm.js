@@ -64,7 +64,7 @@ console.log(topicId)
         <div className="SpacingDiv">
           <div className="UserProfile">
             <form className="OutsideForm" onSubmit={handleSubmit}>
-              <h1>New Meetup Form</h1>
+              <h2>New Meetup Form</h2>
               <label>Title</label>
               <input 
                 className="MeetupForm" 
@@ -127,7 +127,7 @@ console.log(topicId)
               <br />
               <br />
               <br />
-              <input type="submit" className="SignInBtn"></input>
+              <input type="submit" className="CreateMeetupBtn"></input>
             </form>
           </div>
         </div>
