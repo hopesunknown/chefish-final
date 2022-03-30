@@ -29,6 +29,7 @@ console.log(user.topics)
     return (
       <div className="RightComponent">
         <h2>Cuisine Interests</h2>
+        <h4>Get the latest food articles, recipes, and meetup notifications to your email about your selected interests from Chefish.</h4>
         <div className="cuisine-card">
         {user.topics &&
           user.topics.map((t) => {
@@ -43,9 +44,9 @@ console.log(user.topics)
                 <p>
                 <button
                   onClick={() => deleteTopic(t)}
-                  className="DeleteBtn"
+                  className="delete-topic-btn"
                 >
-                  X
+                  x
                 </button>
               </p>
               </>
