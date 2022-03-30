@@ -95,7 +95,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
                     </p>
                     <button 
                       className="edit-comment-btn" 
-                      onClick={handleSetEdit}>Edit
+                      onClick={handleSetEdit}>Edit Comment
                     </button>
                   </>
                   ) : (
@@ -115,7 +115,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
               })}
             <br />
             <button
-              className="SignInBtn"
+              className="join-meetup-btn"
               onClick={() => handleClick(clickedMeetup)}
             >
               Join Meetup
@@ -133,9 +133,13 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
                 value={content}
                 onChange={handleCommentChange}
                 className="comment-box"
-              ></input>
+              >
+              </input>
               <br />
-              <input type="submit"></input>
+              <input 
+              type="submit"
+              className="comment-submit-btn">
+              </input>
             </form>
           </div>
         ) : null}

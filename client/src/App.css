@@ -233,7 +233,7 @@ a:hover {
 .LeftComponent {
   background-color: #FFFFFF;
   text-align: center;
-  width: 18%;
+  width: 10%;
   float: left;
   padding: 30px;
   margin: 10px;
@@ -242,9 +242,9 @@ a:hover {
 
 .CenterComponent {
   background-color: white;
-  width: 40%;
+  width: 45%;
   float: left;
-  padding: 30px;
+  padding: 10px;
   margin-top: 10px;
   column-count: 3;
   margin-left: 0px;
@@ -293,17 +293,21 @@ a:hover {
 }
 
 .Submit {
-  border-radius: 10px;
   cursor: pointer;
-  background-color: white;
-  color: black;
+  font-size: 0.8rem;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
 }
 
 .Submit:hover {
   border-radius: 10px;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: red;
 }
 
 .FlipCard{
@@ -374,6 +378,7 @@ a:hover {
     width: 250px;
     height: 100px;
     margin: 20px;
+    border-radius: 10px;
   }
 
   .hr {
@@ -381,6 +386,73 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+
+  .edit-comment-btn {
+    cursor: pointer;
+    font-size: 0.7rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+  }
+  
+  .edit-comment-btn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+  }
+
+  .join-meetup-btn {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+  }
+  
+  .join-meetup-btn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+  }
+
+  .comment-submit-btn {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+  }
+  
+  .comment-submit-btn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+  }  
+
+  /* Left Component Profile */
+  .LeftComponentProfile {
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 18%;
+    float: left;
+    padding: 30px;
+    margin: 10px;
+    margin-bottom: 100px;
+}
 
   /* CenterComponentProfile & New Meetup Form */
 
