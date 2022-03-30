@@ -1,5 +1,8 @@
 body {
   font-family: 'Mulish', sans-serif;
+  /* background-image: url("./components/Styles/ramen.jpg"); */
+  background-position: center;
+  background-size: 90%;
 }
 
 a {
@@ -97,6 +100,8 @@ a:hover {
   padding-bottom: 0%;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  opacity: 1;
 }
 
 .SignInBtn {
