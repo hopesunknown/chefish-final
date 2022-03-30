@@ -8,7 +8,7 @@ export default function MeetupCard({ leaveMeetup, meetup, user, setUser, handleC
           <h3>{meetup.title}</h3>
           <h4>{meetup.date} at {meetup.time}</h4>
           <h4>{meetup.location}</h4>
-          <button className="Submit"
+          <button className="leave-meetup-btn"
           onClick={() => leaveMeetup(meetup)}
           >Leave Meetup</button>
         </div>

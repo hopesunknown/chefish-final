@@ -346,19 +346,6 @@ a:hover {
   text-align: center;
 }
 
-.MeetupCard {
-  background-color: #3366cc;
-  padding: 10px;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  height: 160px;
-  opacity: 0.5;
-}
-
 /* Meetup Details */
 
   .CommentCard:hover {
@@ -475,7 +462,38 @@ a:hover {
     padding: 30px;
     margin: 10px;
     margin-bottom: 100px;
-}
+  }
+
+  .MeetupCard {
+    background-color: white;
+    padding: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    height: 200px;
+  }
+
+  .leave-meetup-btn {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+  }
+
+  .leave-meetup-btn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+  }
 
   /* CenterComponentProfile & New Meetup Form */
 
@@ -543,7 +561,7 @@ a:hover {
   .OutsideForm {
     border: 1px solid;
     margin: 10px; 
-    padding: 10px;
+    padding-left: 50px;
     border-radius: 20px;
     background-color: white;
     color: black;
