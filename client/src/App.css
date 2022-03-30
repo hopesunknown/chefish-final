@@ -365,7 +365,7 @@ a:hover {
     font-weight: 700;
   }
 
-/* Meetup Details code */
+/* MeetupDetails and EditComment */
   .MeetupDetails {
     text-align: center;
     margin-right: 30px;
@@ -385,6 +385,29 @@ a:hover {
     width: 18%;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .edit-form-label {
+    margin-right: 10px;
+  }
+
+  .save-button {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+  }
+
+  .save-button:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: red;
   }
 
   .edit-comment-btn {

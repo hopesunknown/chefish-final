@@ -29,7 +29,7 @@ export default function EditComment({ user, id, comment, handleUpdatedComment, e
   return (
     <div>
         <form className="edit-comment-form" onSubmit={handleSubmit}>
-            <label className="form-label" htmlFor="edit-comment">
+            <label className="edit-form-label" htmlFor="edit-comment">
                 Edit Comment:
             </label>
             <input 

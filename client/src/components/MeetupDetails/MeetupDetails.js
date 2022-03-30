@@ -109,7 +109,7 @@ export default function MeetupDetails({ user, setUser, clickedMeetup, handleClic
                     />
                     <button 
                       className="edit-comment-btn" 
-                      onClick={handleSetEdit}>Edit</button>
+                      onClick={handleSetEdit}>Back</button>
                   </>)}
                 </>;
               })}
