@@ -15,7 +15,7 @@ export default function SearchBar({ searchWord, handleChange, meetups, setMeetup
               onChange={(event) => handleChange(event)}
             />
           </label>
-          <input type="submit" value="Submit" className="Submit" />
+          <input type="submit" value="Submit" className="meetup-search-btn" />
         </form>
       </div>
     );
