@@ -12,7 +12,8 @@ export default function RecipeCard({ recipe }) {
                 />
                 <div className="card-body">
                     <h3 className="meal-title">{strMeal}</h3>
-                    <span className="recipe-category">{strArea}</span>
+                    <span className="recipe-category">{strArea}
+                    </span>
                     <br/><br/><br/>
                     <a 
                     href={"https://www.themealdb.com/meal/" + idMeal} 

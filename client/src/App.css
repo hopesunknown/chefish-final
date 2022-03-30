@@ -626,11 +626,23 @@ a:hover {
   width: 400px;
 }
 
-.btn {
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+.recipe-search-btn {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
   cursor: pointer;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid;
+  padding: 15px 10px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
 
+.recipe-search-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: red;
 }
 
 .recipes {
@@ -645,7 +657,7 @@ a:hover {
   width: 200px;
   background-color: white;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-bottom: 10px;
 }
 
@@ -656,6 +668,7 @@ a:hover {
 .card-body {
   padding: 10px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .recipe-category {

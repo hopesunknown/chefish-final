@@ -16,7 +16,7 @@ export default function SearchBar({ handleSubmit, query, isLoading, setQuery }) 
                 <input
                     disabled={isLoading || !query}
                     type="submit"
-                    className="btn"
+                    className="recipe-search-btn"
                     value="Search"
                 />
             </form>
