@@ -48,12 +48,12 @@ dutch = Topic.create(topic_name: "Dutch", description: "Dutch cuisine is very si
 puts "Seeding meetups..."
 
 mexicanclass = Meetup.create(title: "Taco Tuesday", date: "May 1", time: "2pm", location: "Georgetown", topic_id: mexican.id,
-    image: "https://myfoodbook.com.au/sites/default/files/styles/car_wd/public/recipe_photo/Enchiladas%20sm.jpg")
+    image: "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/04/Carne-Asada-Tacos-main-3.jpg")
 
 thaiclass = Meetup.create(title: "Thai Ingredient Swap", date: "May 5", time: "1pm", location: "Dupont Circle", topic_id: thai.id,
-    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/passage_to_asia_pad_thai.jpeg")
+    image: "https://www.producemarketguide.com/sites/default/files/thai-chili-peppers_variety-page.png")
 
-chineseclass = Meetup.create(title: "Lo Mein 10 Ways", date: "May 2", time: "3pm", location: "Capitol Hill", topic_id: chinese.id,
+chineseclass = Meetup.create(title: "Chow Mein 10 Ways", date: "May 2", time: "3pm", location: "Capitol Hill", topic_id: chinese.id,
     image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/Chicken_Chow_Mein_0.jpg")
 
 japaneseclass = Meetup.create(title: "Traditional Japanese Cooking Methods", date: "Apr 1", time: "1pm", location: "Tenleytown", topic_id: japanese.id,
@@ -70,10 +70,10 @@ southernclass = Meetup.create(title: "Learn Southern Cooking Essentials", date: 
     image: "https://myfoodbook.com.au/sites/default/files/styles/rc_wd/public/recipe_photo/Southern-Fried-Chicken-with-Maple-Syrup-Waffle.jpg")
 
 spanishclass = Meetup.create(title: "Paella Party!!!", date: "Jun 11", time: "3pm", location: "Anacostia", topic_id: spanish.id,
-    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/Ardm20158149_0.jpg")
+    image: "https://hips.hearstapps.com/vidthumb/images/paella-1555337680.png")
 
 koreanclass = Meetup.create(title: "Kimchi 101", date: "Mar 1", time: "4pm", location: "U Street", topic_id: korean.id,
-    image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/WED%20Korean%20bibambap%200024.jpg")
+    image: "https://assets.bonappetit.com/photos/613235164a6a69e9fc1fc227/8:5/w_1800,h_1125,c_limit/Clean%20Out%20The%20Fridge%20Kimchi.jpg")
 
 moroccanclass = Meetup.create(title: "Moroccan Food and Culture", date: "Jul 9", time: "10am", location: "H Street", topic_id: moroccan.id,
     image: "https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/P504845ae_0.jpg")
