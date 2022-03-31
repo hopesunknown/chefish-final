@@ -92,6 +92,30 @@ a:hover {
 }
 
 /* Signin or Signup Page */
+.signin-page-banner {
+  background: url("https://csxdv4esgai1mnubi1i68jpm-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/7_2013-0530_dinner-table-233-900x600.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65vh;
+  position: relative;
+  margin-top: 8%;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signin-banner-info {
+  font-family: mulish;
+  color: white;
+  text-align: left;
+  font-size: 100px;
+  text-shadow: 3px 3px 8px rgb(68, 68, 68);
+  padding-top: 25vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  width: 50%;
+}
+
 .login_card {
   text-align: center;
   margin-left: 35%;
@@ -225,14 +249,27 @@ a:hover {
 
 /*MainPageBanner*/
 .main-page-banner {
-  background: url("https://www.boutique-homes.com/storage/images/vacation-rentals/europe/greece/akri-villa/villa_for_rent_in_greece_002-1.jpg?s=f");
+  background: url("https://csxdv4esgai1mnubi1i68jpm-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/7_2013-0530_dinner-table-233-900x600.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 65vh;
   position: relative;
   margin-top: 8%;
   margin-bottom: 50px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main-banner-info {
+  font-family: mulish;
+  color: white;
+  text-align: left;
+  font-size: 100px;
+  text-shadow: 3px 3px 8px rgb(68, 68, 68);
+  padding-top: 25vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  width: 50%;
 }
 
 .AllThree {
