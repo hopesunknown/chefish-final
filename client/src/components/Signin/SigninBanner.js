@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MainPageBanner () {
+export default function SigninBanner () {
   return (
     <div className="main-page-banner">
         <div className="main-banner-info">

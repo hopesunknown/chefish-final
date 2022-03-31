@@ -108,7 +108,7 @@ a:hover {
   color: white;
   text-align: left;
   font-size: 100px;
-  text-shadow: 3px 3px 8px rgb(68, 68, 68);
+  text-shadow: 2px 2px 8px rgb(68, 68, 68);
   padding-top: 25vh;
   padding-left: 50px;
   padding-right: 50px;
@@ -247,7 +247,7 @@ a:hover {
   z-index: 8888;
 }
 
-/*MainPageBanner*/
+/* MainPageBanner */
 .main-page-banner {
   background: url("https://csxdv4esgai1mnubi1i68jpm-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/7_2013-0530_dinner-table-233-900x600.jpg");
   background-repeat: no-repeat;
@@ -264,7 +264,7 @@ a:hover {
   color: white;
   text-align: left;
   font-size: 100px;
-  text-shadow: 3px 3px 8px rgb(68, 68, 68);
+  text-shadow: 2px 2px 8px rgb(31, 30, 30);
   padding-top: 25vh;
   padding-left: 50px;
   padding-right: 50px;
