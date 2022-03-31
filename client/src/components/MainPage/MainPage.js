@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
+import MainPageBanner from "./MainPageBanner";
 import Footer from "../Footer/Footer";
 import AllThree from "../AllThree/AllThree";
 
@@ -57,6 +58,7 @@ export default function MainPage({ user, setUser, meetups, setMeetups, handleLog
           setMeetups={setMeetups}
           handleLogOutClick={handleLogOutClick}
         />
+        <MainPageBanner />
         <AllThree
           meetups={meetups}
           setMeetups={setMeetups}

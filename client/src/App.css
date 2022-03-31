@@ -223,6 +223,18 @@ a:hover {
   z-index: 8888;
 }
 
+/*MainPageBanner*/
+.main-page-banner {
+  background: url("https://www.boutique-homes.com/storage/images/vacation-rentals/europe/greece/akri-villa/villa_for_rent_in_greece_002-1.jpg?s=f");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+  margin-top: 8%;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .AllThree {
   width: 100%;
   float: center;
