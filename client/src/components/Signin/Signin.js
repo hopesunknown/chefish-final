@@ -4,6 +4,7 @@ import ProfileNavBar from "../ProfileNavBar/ProfileNavBar";
 import SignInForm from '../SignInForm/SignInForm';
 import Signup from '../Signup/Signup';
 import Button from '../Styles/Button';
+import SigninBanner from './SigninBanner';
 
 export default function Signin({ onLogin }) {
     const [showLogin, setShowLogin] = useState(true);
@@ -11,6 +12,7 @@ export default function Signin({ onLogin }) {
   return (
   <>
     <ProfileNavBar />
+    <SigninBanner />
     {showLogin ? (
       <>
         <SignInForm onLogin={onLogin} />

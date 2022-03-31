@@ -93,7 +93,7 @@ a:hover {
 
 /* Signin or Signup Page */
 .signin-page-banner {
-  background: url("https://csxdv4esgai1mnubi1i68jpm-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/7_2013-0530_dinner-table-233-900x600.jpg");
+  background: url("https://oursaltykitchen.com/wp-content/uploads/2017/06/selling-stock-photography-tips-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 65vh;
@@ -104,23 +104,35 @@ a:hover {
 }
 
 .signin-banner-info {
-  font-family: mulish;
+  font-family: 'Yeseva One', cursive;
   color: white;
   text-align: left;
-  font-size: 100px;
-  text-shadow: 2px 2px 8px rgb(68, 68, 68);
-  padding-top: 25vh;
-  padding-left: 50px;
+  font-size: 80px;
+  text-shadow: 2px 2px 8px rgb(10, 10, 10);
+  padding-top: 20vh;
+  padding-left: 60px;
   padding-right: 50px;
   padding-bottom: 20px;
-  width: 50%;
+  width: 80%;
+}
+
+.signin-banner-info-2 {
+  font-family: 'Yeseva One', cursive;
+  color: white;
+  text-align: left;
+  font-size: 50px;
+  text-shadow: 2px 2px 8px rgb(10, 10, 10);
+  padding-left: 60px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  width: 80%;
 }
 
 .login_card {
   text-align: center;
   margin-left: 35%;
-  margin-top: 15%;
-  padding-top: 5%;
+  margin-top: 2%;
+  padding-top: 2%;
   padding-bottom: 0%;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
